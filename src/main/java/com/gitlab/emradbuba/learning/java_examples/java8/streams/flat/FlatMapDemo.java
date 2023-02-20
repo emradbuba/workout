@@ -2,6 +2,7 @@ package com.gitlab.emradbuba.learning.java_examples.java8.streams.flat;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.util.IntSummaryStatistics;
 import java.util.List;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -36,7 +37,6 @@ public class FlatMapDemo {
                 .build();
         Stream<Person> personStream1 = Stream.of(person1, person2);
         Stream<Person> personStream2 = Stream.of(person3, person4);
-
 
         long numberOfAssignedAdminRoles =
                 Stream.of(personStream1, personStream2)
