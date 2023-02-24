@@ -1,11 +1,9 @@
 package com.gitlab.emradbuba.learning.java_examples.java8.streams.collect;
 
-import java.util.List;
-import java.util.Map;
-import java.util.TreeSet;
+import java.util.*;
 import java.util.stream.Collectors;
 
-public class CollectorDemo {
+public class GroupingCollectorDemo {
     public static void main(String[] args) {
         List<Person> listOfPersons = List.of(
                 new Person("Jack", 12),
@@ -45,14 +43,17 @@ public class CollectorDemo {
         System.out.println("Not yet adults names: " + groupedByAdulthoodWithNames.get(false));
 
         // Names of adults and non adults as TreeSet:
-        Map<Boolean, TreeSet<String>> groupedByAdulthoodWithNamesInTreeSet = listOfPersons
+        Map<Boolean, TreeSet<String>> unmodifiableMap = listOfPersons
                 .stream()
-                .collect(Collectors.groupingBy(
-                        person -> person.age() >= 18,
-                        Collectors.mapping(
-                                Person::name,
-                                Collectors.toCollection(TreeSet::new)
-                        ))
+                .collect(Collectors.collectingAndThen(
+                                Collectors.groupingBy(
+                                        person -> person.age() >= 18,
+                                        Collectors.mapping(
+                                                Person::name,
+                                                Collectors.toCollection(TreeSet::new)
+                                        )),
+                        Collections::unmodifiableMap
+                        )
                 );
         System.out.println("Adults names (tree set): " + groupedByAdulthoodWithNamesInTreeSet.get(true));
         System.out.println("Not yet adults names (tree set): " + groupedByAdulthoodWithNamesInTreeSet.get(false));
