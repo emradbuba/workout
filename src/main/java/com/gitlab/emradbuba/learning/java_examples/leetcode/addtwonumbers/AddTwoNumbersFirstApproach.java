@@ -1,8 +1,6 @@
 package com.gitlab.emradbuba.learning.java_examples.leetcode.addtwonumbers;
 
-import java.math.BigInteger;
-
-public class AddTwoNumbers {
+public class AddTwoNumbersFirstApproach implements AddTwoNumbersSolution {
 
     // Actual solution method:
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {

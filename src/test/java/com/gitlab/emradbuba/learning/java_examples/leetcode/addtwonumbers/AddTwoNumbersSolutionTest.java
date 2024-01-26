@@ -7,14 +7,15 @@ import static com.gitlab.emradbuba.learning.java_examples.leetcode.addtwonumbers
 import static com.gitlab.emradbuba.learning.java_examples.leetcode.addtwonumbers.TestUtils.getListAsStringNumber;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class AddTwoNumbersTest {
+class AddTwoNumbersSolutionTest {
 
     private ListNode firstList, secondList;
-    private AddTwoNumbers addTwoNumbers;
+    private AddTwoNumbersSolution addTwoNumbersSolution;
 
     @BeforeEach
     void setUp() {
-        addTwoNumbers = new AddTwoNumbers();
+        //addTwoNumbersSolution = new AddTwoNumbersFirstApproach();
+        addTwoNumbersSolution = new AddTwoNumbersFirstApproachRefactored();
     }
 
     @Test
@@ -22,7 +23,7 @@ class AddTwoNumbersTest {
         firstList = createListNodeForNumber("123");
         secondList = createListNodeForNumber("123");
 
-        ListNode resultAsList = addTwoNumbers.addTwoNumbers(firstList, secondList);
+        ListNode resultAsList = addTwoNumbersSolution.addTwoNumbers(firstList, secondList);
         String resultAsString = getListAsStringNumber(resultAsList);
 
         assertEquals("246", resultAsString);
@@ -33,7 +34,7 @@ class AddTwoNumbersTest {
         firstList = createListNodeForNumber("923");
         secondList = createListNodeForNumber("923");
 
-        ListNode resultAsList = addTwoNumbers.addTwoNumbers(firstList, secondList);
+        ListNode resultAsList = addTwoNumbersSolution.addTwoNumbers(firstList, secondList);
         String resultAsString = getListAsStringNumber(resultAsList);
 
         assertEquals("1846", resultAsString);
@@ -44,7 +45,7 @@ class AddTwoNumbersTest {
         firstList = createListNodeForNumber("987");
         secondList = createListNodeForNumber("789");
 
-        ListNode resultAsList = addTwoNumbers.addTwoNumbers(firstList, secondList);
+        ListNode resultAsList = addTwoNumbersSolution.addTwoNumbers(firstList, secondList);
         String resultAsString = getListAsStringNumber(resultAsList);
 
         assertEquals("1776", resultAsString);
@@ -55,7 +56,7 @@ class AddTwoNumbersTest {
         firstList = createListNodeForNumber("123");
         secondList = createListNodeForNumber("123456");
 
-        ListNode resultAsList = addTwoNumbers.addTwoNumbers(firstList, secondList);
+        ListNode resultAsList = addTwoNumbersSolution.addTwoNumbers(firstList, secondList);
         String resultAsString = getListAsStringNumber(resultAsList);
 
         assertEquals("123579", resultAsString);
@@ -66,7 +67,7 @@ class AddTwoNumbersTest {
         firstList = createListNodeForNumber("999");
         secondList = createListNodeForNumber("999993");
 
-        ListNode resultAsList = addTwoNumbers.addTwoNumbers(firstList, secondList);
+        ListNode resultAsList = addTwoNumbersSolution.addTwoNumbers(firstList, secondList);
         String resultAsString = getListAsStringNumber(resultAsList);
 
         assertEquals("1000992", resultAsString);
@@ -77,7 +78,7 @@ class AddTwoNumbersTest {
         firstList = createListNodeForNumber("1");
         secondList = createListNodeForNumber("8");
 
-        ListNode resultAsList = addTwoNumbers.addTwoNumbers(firstList, secondList);
+        ListNode resultAsList = addTwoNumbersSolution.addTwoNumbers(firstList, secondList);
         String resultAsString = getListAsStringNumber(resultAsList);
 
         assertEquals("9", resultAsString);
@@ -88,7 +89,7 @@ class AddTwoNumbersTest {
         firstList = createListNodeForNumber("0");
         secondList = createListNodeForNumber("123");
 
-        ListNode resultAsList = addTwoNumbers.addTwoNumbers(firstList, secondList);
+        ListNode resultAsList = addTwoNumbersSolution.addTwoNumbers(firstList, secondList);
         String resultAsString = getListAsStringNumber(resultAsList);
 
         assertEquals("123", resultAsString);
@@ -99,7 +100,7 @@ class AddTwoNumbersTest {
         firstList = createListNodeForNumber("123");
         secondList = createListNodeForNumber("0");
 
-        ListNode resultAsList = addTwoNumbers.addTwoNumbers(firstList, secondList);
+        ListNode resultAsList = addTwoNumbersSolution.addTwoNumbers(firstList, secondList);
         String resultAsString = getListAsStringNumber(resultAsList);
 
         assertEquals("123", resultAsString);
@@ -110,7 +111,7 @@ class AddTwoNumbersTest {
         firstList = createListNodeForNumber("0");
         secondList = createListNodeForNumber("0");
 
-        ListNode resultAsList = addTwoNumbers.addTwoNumbers(firstList, secondList);
+        ListNode resultAsList = addTwoNumbersSolution.addTwoNumbers(firstList, secondList);
         String resultAsString = getListAsStringNumber(resultAsList);
 
         assertEquals("0", resultAsString);
