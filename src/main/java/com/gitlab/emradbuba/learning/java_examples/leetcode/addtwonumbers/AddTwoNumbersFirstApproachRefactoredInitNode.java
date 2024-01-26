@@ -1,7 +1,5 @@
 package com.gitlab.emradbuba.learning.java_examples.leetcode.addtwonumbers;
 
-import java.util.List;
-
 public class AddTwoNumbersFirstApproachRefactoredInitNode implements AddTwoNumbersSolution {
 
     // Actual solution method:
@@ -14,8 +12,8 @@ public class AddTwoNumbersFirstApproachRefactoredInitNode implements AddTwoNumbe
             int sum = (firstList != null ? firstList.val : 0)
                     + (secondList != null ? secondList.val : 0)
                     + inMemo;
-            if(firstList != null) firstList = firstList.next;
-            if(secondList != null) secondList = secondList.next;
+            if (firstList != null) firstList = firstList.next;
+            if (secondList != null) secondList = secondList.next;
             inMemo = sum / 10;
             ListNode newListNode = new ListNode(sum % 10);
             recentlyAddedNode.next = newListNode;
