@@ -14,8 +14,9 @@ class AddTwoNumbersSolutionTest {
 
     @BeforeEach
     void setUp() {
-        //addTwoNumbersSolution = new AddTwoNumbersFirstApproach();
-        addTwoNumbersSolution = new AddTwoNumbersFirstApproachRefactored();
+        // addTwoNumbersSolution = new AddTwoNumbersFirstApproach();
+        // addTwoNumbersSolution = new AddTwoNumbersFirstApproachRefactored();
+        addTwoNumbersSolution = new AddTwoNumbersFirstApproachRefactoredInitNode();
     }
 
     @Test
