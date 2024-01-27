@@ -34,6 +34,12 @@ class LinkedListCycleTest {
     }
 
     @Test
+    void shouldReturnTrueWhenListOneElementWithSelfCycle() {
+        assertTrue(linkedListCycle.hasCycle(createListNodeForNumber(0, 1)));
+    }
+
+
+    @Test
     void shouldReturnFalseWhenListDoesNotHaveCycles() {
         int posIdx = -1;
         ListNode list = createListNodeForNumber(posIdx, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
@@ -47,5 +53,10 @@ class LinkedListCycleTest {
         ListNode list = createListNodeForNumber(posIdx, 1);
 
         assertFalse(linkedListCycle.hasCycle(list));
+    }
+
+    @Test
+    void shouldReturnFalseWhenListIsNull() {
+        assertFalse(linkedListCycle.hasCycle(null));
     }
 }
