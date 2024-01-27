@@ -1,6 +1,6 @@
 package com.gitlab.emradbuba.learning.java_examples.leetcode.likedlistcycle;
 
-public class LinkedListCycleFirst implements LinkedListCycleSolution {
+public class LinkedListCycleFirstSolution implements LinkedListCycleSolution {
 
     // This solution "inverts" the 'next' pointer while moving.
     // If there is a cycle, path from already visited node will lead to head,
