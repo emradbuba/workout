@@ -7,9 +7,9 @@ public class AddTwoNumbersUsingBigInteger implements AddTwoNumbersSolution {
     public ListNode addTwoNumbers(ListNode firstList, ListNode secondList) {
         BigInteger firstListAsBigInt = new BigInteger(createRealNumberFromList(firstList));
         BigInteger secondListAsBigInt = new BigInteger(createRealNumberFromList(secondList));
-        String sumAsString = firstListAsBigInt.add(secondListAsBigInt).toString();
+        BigInteger sumAsBigInt = firstListAsBigInt.add(secondListAsBigInt);
         ListNode resultNode = null;
-        for (char c : sumAsString.toCharArray()) {
+        for (char c : sumAsBigInt.toString().toCharArray()) {
             resultNode = new ListNode(Integer.parseInt("" + c), resultNode);
         }
         return resultNode;
