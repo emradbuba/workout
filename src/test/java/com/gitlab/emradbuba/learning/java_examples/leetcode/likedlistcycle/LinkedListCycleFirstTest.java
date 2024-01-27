@@ -5,16 +5,16 @@ import org.junit.jupiter.api.Test;
 import static com.gitlab.emradbuba.learning.java_examples.leetcode.likedlistcycle.TestUtils.createListNodeForNumber;
 import static org.junit.jupiter.api.Assertions.*;
 
-class LinkedListCycleTest {
+class LinkedListCycleFirstTest {
 
-    private LinkedListCycle linkedListCycle = new LinkedListCycle();
+    private LinkedListCycleFirst linkedListCycleFirst = new LinkedListCycleFirst();
 
     @Test
     void shouldReturnTrueWhenListContainsCycleOnPos1() {
         int posIdx = 1;
         ListNode list = createListNodeForNumber(posIdx, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
-        assertTrue(linkedListCycle.hasCycle(list));
+        assertTrue(linkedListCycleFirst.hasCycle(list));
     }
 
     @Test
@@ -22,20 +22,20 @@ class LinkedListCycleTest {
         int posIdx = 8;
         ListNode list = createListNodeForNumber(posIdx, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
-        assertTrue(linkedListCycle.hasCycle(list));
+        assertTrue(linkedListCycleFirst.hasCycle(list));
     }
 
     @Test
-    void shouldReturnTrueWhenListContainsSeftCycleOneLastElement() {
+    void shouldReturnTrueWhenListContainsSelfCycleOneLastElement() {
         int posIdx = 9;
         ListNode list = createListNodeForNumber(posIdx, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
-        assertTrue(linkedListCycle.hasCycle(list));
+        assertTrue(linkedListCycleFirst.hasCycle(list));
     }
 
     @Test
     void shouldReturnTrueWhenListOneElementWithSelfCycle() {
-        assertTrue(linkedListCycle.hasCycle(createListNodeForNumber(0, 1)));
+        assertTrue(linkedListCycleFirst.hasCycle(createListNodeForNumber(0, 1)));
     }
 
 
@@ -44,7 +44,7 @@ class LinkedListCycleTest {
         int posIdx = -1;
         ListNode list = createListNodeForNumber(posIdx, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
-        assertFalse(linkedListCycle.hasCycle(list));
+        assertFalse(linkedListCycleFirst.hasCycle(list));
     }
 
     @Test
@@ -52,11 +52,11 @@ class LinkedListCycleTest {
         int posIdx = -1;
         ListNode list = createListNodeForNumber(posIdx, 1);
 
-        assertFalse(linkedListCycle.hasCycle(list));
+        assertFalse(linkedListCycleFirst.hasCycle(list));
     }
 
     @Test
     void shouldReturnFalseWhenListIsNull() {
-        assertFalse(linkedListCycle.hasCycle(null));
+        assertFalse(linkedListCycleFirst.hasCycle(null));
     }
 }
