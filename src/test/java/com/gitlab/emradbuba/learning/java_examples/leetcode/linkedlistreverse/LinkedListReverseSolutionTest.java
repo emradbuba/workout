@@ -33,9 +33,7 @@ class LinkedListReverseSolutionTest {
 
     @TestAllImplementations
     public void shouldReturnEmptyListForNullElementCase(String testName, LinkedListReverseSolution solution) {
-        ListNode list = createListNode(null);
-
-        ListNode reversedList = solution.reverseList(list);
+        ListNode reversedList = solution.reverseList(null);
         String reversedListAsString = getListAsStringNumber(reversedList);
 
         assertEquals("", reversedListAsString);
@@ -44,7 +42,8 @@ class LinkedListReverseSolutionTest {
 
     static Stream<Arguments> allImplementations() {
         return Stream.of(
-                Arguments.of("First solution", new LinkedListSoReverseInvertPointerSolution())
+                Arguments.of("Reverse pointer solution", new LinkedListSoReverseInvertPointerSolution()),
+                Arguments.of("Recursive solution", new LinkedListSoReverseRecursiveSolution())
         );
     }
 }
