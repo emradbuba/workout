@@ -44,7 +44,7 @@ class LinkedListReverseSolutionTest {
 
     static Stream<Arguments> allImplementations() {
         return Stream.of(
-                Arguments.of("First solution", new LinkedListSoReverseFirstSolution())
+                Arguments.of("First solution", new LinkedListSoReverseInvertPointerSolution())
         );
     }
 }
