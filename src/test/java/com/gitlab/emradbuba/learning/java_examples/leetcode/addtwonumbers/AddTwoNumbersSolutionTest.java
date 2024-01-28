@@ -1,11 +1,8 @@
 package com.gitlab.emradbuba.learning.java_examples.leetcode.addtwonumbers;
 
-import org.junit.jupiter.params.ParameterizedTest;
+import com.gitlab.emradbuba.learning.java_examples.leetcode.TestAllImplementations;
 import org.junit.jupiter.params.provider.Arguments;
-import org.junit.jupiter.params.provider.MethodSource;
 
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
 import java.util.stream.Stream;
 
 import static com.gitlab.emradbuba.learning.java_examples.leetcode.addtwonumbers.TestUtils.createListNodeForNumber;
@@ -14,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class AddTwoNumbersSolutionTest {
 
-    @TestAllImplemetations
+    @TestAllImplementations
     void shouldReturnCorrectListForTwo3DigitNumbers(AddTwoNumbersSolution addTwoNumbersSolution) {
         ListNode firstList = createListNodeForNumber("123");
         ListNode secondList = createListNodeForNumber("123");
@@ -25,7 +22,7 @@ class AddTwoNumbersSolutionTest {
         assertEquals("246", resultAsString);
     }
 
-    @TestAllImplemetations
+    @TestAllImplementations
     void shouldReturnCorrectListForTwo3DigitNumbersAnd4DigitsSum(AddTwoNumbersSolution addTwoNumbersSolution) {
         ListNode firstList = createListNodeForNumber("923");
         ListNode secondList = createListNodeForNumber("923");
@@ -36,7 +33,7 @@ class AddTwoNumbersSolutionTest {
         assertEquals("1846", resultAsString);
     }
 
-    @TestAllImplemetations
+    @TestAllImplementations
     void shouldReturnCorrectListForTwo3DigitNumbersAnd4DigitsSumWithManyDecimalMoves(AddTwoNumbersSolution addTwoNumbersSolution) {
         ListNode firstList = createListNodeForNumber("987");
         ListNode secondList = createListNodeForNumber("789");
@@ -47,7 +44,7 @@ class AddTwoNumbersSolutionTest {
         assertEquals("1776", resultAsString);
     }
 
-    @TestAllImplemetations
+    @TestAllImplementations
     void shouldReturnCorrectListFor3DigitAnd6DigitNumbers(AddTwoNumbersSolution addTwoNumbersSolution) {
         ListNode firstList = createListNodeForNumber("123");
         ListNode secondList = createListNodeForNumber("123456");
@@ -58,7 +55,7 @@ class AddTwoNumbersSolutionTest {
         assertEquals("123579", resultAsString);
     }
 
-    @TestAllImplemetations
+    @TestAllImplementations
     void shouldReturnCorrectListFor3DigitAnd6DigitNumbersWith7DigitsSum(AddTwoNumbersSolution addTwoNumbersSolution) {
         ListNode firstList = createListNodeForNumber("999");
         ListNode secondList = createListNodeForNumber("999993");
@@ -69,7 +66,7 @@ class AddTwoNumbersSolutionTest {
         assertEquals("1000992", resultAsString);
     }
 
-    @TestAllImplemetations
+    @TestAllImplementations
     void shouldReturnCorrectListForTwo1DigitNumber(AddTwoNumbersSolution addTwoNumbersSolution) {
         ListNode firstList = createListNodeForNumber("1");
         ListNode secondList = createListNodeForNumber("8");
@@ -80,7 +77,7 @@ class AddTwoNumbersSolutionTest {
         assertEquals("9", resultAsString);
     }
 
-    @TestAllImplemetations
+    @TestAllImplementations
     void shouldReturnCorrectListWhenFirstIsZero(AddTwoNumbersSolution addTwoNumbersSolution) {
         ListNode firstList = createListNodeForNumber("0");
         ListNode secondList = createListNodeForNumber("123");
@@ -91,7 +88,7 @@ class AddTwoNumbersSolutionTest {
         assertEquals("123", resultAsString);
     }
 
-    @TestAllImplemetations
+    @TestAllImplementations
     void shouldReturnCorrectListWhenSecondIsZero(AddTwoNumbersSolution addTwoNumbersSolution) {
         ListNode firstList = createListNodeForNumber("123");
         ListNode secondList = createListNodeForNumber("0");
@@ -102,7 +99,7 @@ class AddTwoNumbersSolutionTest {
         assertEquals("123", resultAsString);
     }
 
-    @TestAllImplemetations
+    @TestAllImplementations
     void shouldReturnCorrectListWhenBothAreZeros(AddTwoNumbersSolution addTwoNumbersSolution) {
         ListNode firstList = createListNodeForNumber("0");
         ListNode secondList = createListNodeForNumber("0");
@@ -120,11 +117,5 @@ class AddTwoNumbersSolutionTest {
                 Arguments.of(new AddTwoNumbersFirstApproachRefactored()),
                 Arguments.of(new AddTwoNumbersFirstApproachRefactoredInitNode())
         );
-    }
-
-    @ParameterizedTest
-    @MethodSource("allImplementations")
-    @Retention(RetentionPolicy.RUNTIME)
-    public @interface TestAllImplemetations {
     }
 }

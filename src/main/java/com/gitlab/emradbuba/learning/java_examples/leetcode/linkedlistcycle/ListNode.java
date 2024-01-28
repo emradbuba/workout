@@ -1,4 +1,4 @@
-package com.gitlab.emradbuba.learning.java_examples.leetcode.likedlistcycle;
+package com.gitlab.emradbuba.learning.java_examples.leetcode.linkedlistcycle;
 
 class ListNode {
     int val;
