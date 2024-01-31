@@ -2,7 +2,7 @@ package com.gitlab.emradbuba.learning.java_examples.leetcode.twosum;
 
 import java.util.HashMap;
 
-public class TwoSumImprovedSolution implements TwoSumSolution {
+public class TwoSumHashMapSolution implements TwoSumSolution {
 
     @Override
     public int[] twoSum(int[] nums, int target) {

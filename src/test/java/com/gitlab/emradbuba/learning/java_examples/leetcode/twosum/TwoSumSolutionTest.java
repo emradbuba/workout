@@ -7,7 +7,7 @@ import java.util.stream.Stream;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
-class TwoSumBasicSolutionTest {
+class TwoSumSolutionTest {
 
     @TestAllImplementations
     void shouldReturnExpectedIndexesForHappyCase(String testName, TwoSumSolution solution) {
@@ -45,7 +45,8 @@ class TwoSumBasicSolutionTest {
     static Stream<Arguments> allImplementations() {
         return Stream.of(
                 Arguments.of("Basic solution", new TwoSumBasicSolution()),
-                Arguments.of( "HashMap approach solution", new TwoSumImprovedSolution())
+                Arguments.of( "HashMap approach solution", new TwoSumHashMapSolution()),
+                Arguments.of( "Pointers approach solution", new TwoSumPointersSolution())
         );
     }
 }
