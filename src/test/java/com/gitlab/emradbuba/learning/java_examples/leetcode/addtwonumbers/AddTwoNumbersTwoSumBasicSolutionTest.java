@@ -9,7 +9,7 @@ import static com.gitlab.emradbuba.learning.java_examples.leetcode.addtwonumbers
 import static com.gitlab.emradbuba.learning.java_examples.leetcode.addtwonumbers.TestUtils.getListAsStringNumber;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class AddTwoNumbersSolutionTest {
+class AddTwoNumbersTwoSumBasicSolutionTest {
 
     @TestAllImplementations
     void shouldReturnCorrectListForTwo3DigitNumbers(AddTwoNumbersSolution addTwoNumbersSolution) {

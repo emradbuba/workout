@@ -9,7 +9,7 @@ import static com.gitlab.emradbuba.learning.java_examples.leetcode.linkedlistcyc
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-class LinkedListCycleFirstSolutionTest {
+class LinkedListCycleFirstTwoSumBasicSolutionTest {
 
     @TestAllImplementations
     void shouldReturnTrueWhenListContainsCycleOnPos1(String testName, LinkedListCycleSolution linkedListCycleSolution) {

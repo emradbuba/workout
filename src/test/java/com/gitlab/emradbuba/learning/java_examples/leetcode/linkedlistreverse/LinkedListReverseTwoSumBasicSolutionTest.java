@@ -9,7 +9,7 @@ import static com.gitlab.emradbuba.learning.java_examples.leetcode.linkedlistrev
 import static com.gitlab.emradbuba.learning.java_examples.leetcode.linkedlistreverse.TestUtils.getListAsStringNumber;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class LinkedListReverseSolutionTest {
+class LinkedListReverseTwoSumBasicSolutionTest {
 
     @TestAllImplementations
     public void shouldReturnReversedListForBasicCase(String testName, LinkedListReverseSolution solution) {

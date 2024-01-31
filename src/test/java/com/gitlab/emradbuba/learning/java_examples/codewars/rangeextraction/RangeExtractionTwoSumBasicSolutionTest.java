@@ -6,7 +6,7 @@ import java.util.stream.IntStream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class RangeExtractionSolutionTest {
+public class RangeExtractionTwoSumBasicSolutionTest {
 
     @Test
     public void shouldReturnCorrectResultForPositiveSequenceWithoutRanges() {
