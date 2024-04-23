@@ -1,4 +1,4 @@
-package com.gitlab.emradbuba.learning.java_examples.wfts;
+package com.gitlab.emradbuba.learning.java_examples.other;
 
 import java.util.logging.Logger;
 
