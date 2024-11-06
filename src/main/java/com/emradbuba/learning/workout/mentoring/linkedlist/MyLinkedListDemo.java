@@ -11,5 +11,12 @@ public class MyLinkedListDemo {
         myList.add(5);
 
         System.out.println(String.format("List (%d items): %s", myList.size(), myList));
+
+        myList.remove(1);
+        myList.remove(0);
+        myList.remove(0);
+        myList.remove(1);
+
+        System.out.println(String.format("List (%d items): %s", myList.size(), myList));
     }
 }

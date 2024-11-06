@@ -17,8 +17,24 @@ public class MyLinkedList<T> {
             current = current.next;
         }
 
-        MyLinkedListElement<T> element = new MyLinkedListElement<>(value, current, null);
-        current.next = element;
+        current.next = new MyLinkedListElement<>(value, current, null);
+    }
+
+    public void remove(int index) {
+        if (index >= size()) return;
+        MyLinkedListElement<T> current = head;
+        for (int i = 0; i < index; i++) {
+            current = current.next;
+        }
+        if (current.prev != null) {
+            current.prev.next = current.next;
+        }
+        if (current.next != null) {
+            current.next.prev = current.prev;
+        }
+        if(current == head) {
+            head = current.next;
+        }
     }
 
     public int size() {
@@ -35,7 +51,7 @@ public class MyLinkedList<T> {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         MyLinkedListElement<T> current = head;
-        while(current != null) {
+        while (current != null) {
             sb.append(" ==> ").append(current);
             current = current.next;
         }
