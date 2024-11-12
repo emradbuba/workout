@@ -33,7 +33,7 @@ public class MyLinkedList<T> {
         if (current.next != null) {
             current.next.prev = current.prev;
         }
-        if(current == head) {
+        if (current == head) {
             head = current.next;
         }
     }
@@ -46,6 +46,35 @@ public class MyLinkedList<T> {
             count++;
         }
         return count;
+    }
+
+    public T get(int index) {
+        return getElement(index).value;
+    }
+
+    private MyLinkedListElement<T> getElement(int index) {
+        if (index > size() - 1) {
+            throw new IndexOutOfBoundsException();
+        }
+
+        MyLinkedListElement<T> current = head;
+        for (int i = 0; i < index; i++) {
+            current = current.next;
+        }
+        return current;
+    }
+
+    public void revert() {
+        int size = size();
+        if (size < 2) return;
+        this.head = getElement(size - 1);
+        MyLinkedListElement<T> current = head;
+        while (current != null) {
+            MyLinkedListElement<T> tmp = current.next;
+            current.next = current.prev;
+            current.prev = tmp;
+            current = current.next;
+        }
     }
 
     @Override
