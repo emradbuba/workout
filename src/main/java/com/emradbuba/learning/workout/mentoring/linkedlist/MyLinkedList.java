@@ -66,15 +66,20 @@ public class MyLinkedList<T> {
 
     public void revert() {
         int size = size();
-        if (size < 2) return;
-        this.head = getElement(size - 1);
-        MyLinkedListElement<T> current = head;
-        while (current != null) {
-            MyLinkedListElement<T> tmp = current.next;
-            current.next = current.prev;
-            current.prev = tmp;
-            current = current.next;
+        if(size < 2) return;
+        MyLinkedListElement<T> element = getElement(size - 1);
+        this.head = element;
+        while(element != null) {
+            MyLinkedListElement<T> tmp = element.prev;
+            element.prev = element.next;
+            element.next = tmp;
+            element = element.next;
         }
+    }
+
+    public MyLinkedList<T> createNewReverted() {
+        // TODO:
+        throw new UnsupportedOperationException("This operation is not yet implemented");
     }
 
     @Override
