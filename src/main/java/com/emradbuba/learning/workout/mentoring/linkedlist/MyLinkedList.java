@@ -1,5 +1,6 @@
 package com.emradbuba.learning.workout.mentoring.linkedlist;
 
+
 import lombok.AllArgsConstructor;
 
 public class MyLinkedList<T> {
@@ -59,7 +60,7 @@ public class MyLinkedList<T> {
     }
 
     @AllArgsConstructor
-    private class MyLinkedListElement<T> {
+    private static class MyLinkedListElement<T> {
 
         private T value;
         private MyLinkedListElement<T> prev;
@@ -71,3 +72,15 @@ public class MyLinkedList<T> {
         }
     }
 }
+
+
+// 1.
+// [1]->[2]->[3]
+// [2]->[4]->[6]
+
+// 3 -> 6 -> 9
+
+// 2. Remove from list --> remove(int index)
+// 3. Reverse list
+// 4. isCyclic()
+// 5. willEverMeet()

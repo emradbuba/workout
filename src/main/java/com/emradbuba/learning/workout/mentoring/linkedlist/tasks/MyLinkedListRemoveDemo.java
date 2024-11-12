@@ -1,8 +1,11 @@
-package com.emradbuba.learning.workout.mentoring.linkedlist;
+package com.emradbuba.learning.workout.mentoring.linkedlist.tasks;
 
-public class MyLinkedListDemo {
+import com.emradbuba.learning.workout.mentoring.linkedlist.MyLinkedList;
 
+public class MyLinkedListRemoveDemo {
     public static void main(String[] args) {
+
+
         MyLinkedList<Integer> myList = new MyLinkedList<>();
         myList.add(1);
         myList.add(2);
