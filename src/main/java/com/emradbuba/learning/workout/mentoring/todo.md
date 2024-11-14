@@ -1,5 +1,4 @@
-[ ] LinkedList - removing elements from list <br>
-[ ] LinkedList - reverting - current variant <br>
+[ ] LinkedList - reverting - current variant (revert pointer) <br>
 [ ] LinkedList - reverting - recursive variant <br>
 [ ] LinkedList - isCycle() <br>
 [ ] LinkedList - https://leetcode.com/problems/add-two-numbers/description/ <br>
