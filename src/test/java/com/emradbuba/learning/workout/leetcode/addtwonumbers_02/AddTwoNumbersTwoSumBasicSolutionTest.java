@@ -1,4 +1,4 @@
-package com.emradbuba.learning.workout.leetcode.addtwonumbers;
+package com.emradbuba.learning.workout.leetcode.addtwonumbers_02;
 
 import com.emradbuba.learning.workout.leetcode.TestAllImplementations;
 import org.junit.jupiter.params.provider.Arguments;

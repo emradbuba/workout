@@ -1,4 +1,4 @@
-package com.emradbuba.learning.workout.leetcode.linkedlistreverse;
+package com.emradbuba.learning.workout.leetcode.linkedlistreverse_206;
 
 public class TestUtils {
 

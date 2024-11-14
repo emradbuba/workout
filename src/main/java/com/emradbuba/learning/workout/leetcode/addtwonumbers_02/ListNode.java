@@ -1,4 +1,4 @@
-package com.emradbuba.learning.workout.leetcode.addtwonumbers;
+package com.emradbuba.learning.workout.leetcode.addtwonumbers_02;
 
 public class ListNode {
     public int val;

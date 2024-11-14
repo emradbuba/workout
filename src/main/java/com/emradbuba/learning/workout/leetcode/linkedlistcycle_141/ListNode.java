@@ -1,4 +1,4 @@
-package com.emradbuba.learning.workout.leetcode.linkedlistcycle;
+package com.emradbuba.learning.workout.leetcode.linkedlistcycle_141;
 
 class ListNode {
     int val;

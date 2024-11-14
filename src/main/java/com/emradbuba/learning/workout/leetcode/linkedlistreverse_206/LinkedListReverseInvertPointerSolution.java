@@ -1,6 +1,6 @@
-package com.emradbuba.learning.workout.leetcode.linkedlistreverse;
+package com.emradbuba.learning.workout.leetcode.linkedlistreverse_206;
 
-public class LinkedListSoReverseInvertPointerSolution implements LinkedListReverseSolution {
+public class LinkedListReverseInvertPointerSolution implements LinkedListReverseSolution {
     @Override
     public ListNode reverseList(ListNode head) {
         if (head == null || head.next == null) return head;

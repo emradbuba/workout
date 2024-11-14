@@ -1,11 +1,11 @@
-package com.emradbuba.learning.workout.leetcode.linkedlistcycle;
+package com.emradbuba.learning.workout.leetcode.linkedlistcycle_141;
 
 import com.emradbuba.learning.workout.leetcode.TestAllImplementations;
 import org.junit.jupiter.params.provider.Arguments;
 
 import java.util.stream.Stream;
 
-import static com.emradbuba.learning.workout.leetcode.linkedlistcycle.TestUtils.createListNodeForNumber;
+import static com.emradbuba.learning.workout.leetcode.linkedlistcycle_141.TestUtils.createListNodeForNumber;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
