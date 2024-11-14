@@ -1,6 +1,6 @@
 package com.emradbuba.learning.workout.leetcode.linkedlistreverse_206;
 
-public class LinkedListReverseRecursiveSolution implements LinkedListReverseSolution {
+public class LinkedListReverseCopingSolution implements LinkedListReverseSolution {
     @Override
     public ListNode reverseList(ListNode head) {
         if (head == null) return null;
@@ -10,13 +10,13 @@ public class LinkedListReverseRecursiveSolution implements LinkedListReverseSolu
 
         ListNode newListHead = reverseList(head.next);
         ListNode newListTail = newListHead;
+        ListNode headCopy = new ListNode(head.val);
 
         while (newListTail.next != null) {
             newListTail = newListTail.next;
         }
 
-        newListTail.next = head;
-        head.next = null;
+        newListTail.next = headCopy;
         return newListHead;
     }
 }

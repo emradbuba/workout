@@ -1,6 +1,7 @@
 package com.emradbuba.learning.workout.leetcode.linkedlistreverse_206;
 
 import com.emradbuba.learning.workout.leetcode.TestAllImplementations;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.provider.Arguments;
 
 import java.util.stream.Stream;
@@ -31,12 +32,12 @@ class LinkedListReverseSolutionTest {
         assertEquals("321", reversedListAsString);
     }
 
-    @TestAllImplementations
-    public void shouldReturnReversedListWithSameReferences(String testName, LinkedListReverseSolution solution) {
+    @Test
+    public void shouldReturnReversedListWithSameReferencesWhenCopingRecursive() {
         ListNode list = TestUtils.createListNode(1, 2, 3);
         String originalListString = TestUtils.getListAsStringNumber(list);
 
-        solution.reverseList(list);
+        new LinkedListReverseCopingSolution().reverseList(list);
 
         assertEquals(originalListString, TestUtils.getListAsStringNumber(list));
     }
@@ -64,7 +65,7 @@ class LinkedListReverseSolutionTest {
         return Stream.of(
                 Arguments.of("Reverse pointer solution", new LinkedListReverseInvertPointerSolution()),
                 Arguments.of("Recursive solution", new LinkedListReverseRecursiveSolution()),
-                Arguments.of("Mentoring solution", new LinkedListReverseMentoringSolution())
+                Arguments.of("Mentoring solution", new LinkedListReverseCopingSolution())
         );
     }
 }
