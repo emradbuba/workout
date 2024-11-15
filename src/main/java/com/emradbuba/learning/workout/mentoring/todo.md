@@ -1,7 +1,7 @@
 [OK] <strike>LinkedList - reverting - current variant (revert pointer)</strike> <br>
 [OK] <strike>LinkedList - reverting - recursive variant <br></strike>
 [OK] <strike>LinkedList - isCycle() </strike><br>
-[ ] LinkedList - https://leetcode.com/problems/add-two-numbers/description/ <br>
+[OK] <strike>LinkedList - https://leetcode.com/problems/add-two-numbers/description/ </strike><br>
 [ ] LinkedList - https://leetcode.com/problems/add-two-numbers-ii/ <br>
 <br>
 [ ] ArrayList vs LinedList vs Array in Java<br>
