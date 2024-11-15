@@ -1,6 +1,6 @@
-[ ] LinkedList - reverting - current variant (revert pointer) <br>
-[ ] LinkedList - reverting - recursive variant <br>
-[ ] LinkedList - isCycle() <br>
+[OK] <strike>LinkedList - reverting - current variant (revert pointer)</strike> <br>
+[OK] <strike>LinkedList - reverting - recursive variant <br></strike>
+[OK] <strike>LinkedList - isCycle() </strike><br>
 [ ] LinkedList - https://leetcode.com/problems/add-two-numbers/description/ <br>
 [ ] LinkedList - https://leetcode.com/problems/add-two-numbers-ii/ <br>
 <br>

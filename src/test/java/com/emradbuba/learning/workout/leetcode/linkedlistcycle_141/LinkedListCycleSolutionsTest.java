@@ -9,7 +9,7 @@ import static com.emradbuba.learning.workout.leetcode.linkedlistcycle_141.TestUt
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-class LinkedListCycleFirstTwoSumBasicSolutionTest {
+class LinkedListCycleSolutionsTest {
 
     @TestAllImplementations
     void shouldReturnTrueWhenListContainsCycleOnPos1(String testName, LinkedListCycleSolution linkedListCycleSolution) {
@@ -67,7 +67,8 @@ class LinkedListCycleFirstTwoSumBasicSolutionTest {
     static Stream<Arguments> allImplementations() {
         return Stream.of(
                 Arguments.of("First solution", new LinkedListCycleFirstSolution()),
-                Arguments.of("Two pointer algo", new LinkedListCycleTwoPointerAlgorithmSolution())
+                Arguments.of("Two pointer algo", new LinkedListCycleTwoPointerAlgorithmSolution()),
+                Arguments.of("Recap 1", new LinkedListCycleRecapSolution())
         );
     }
 }
