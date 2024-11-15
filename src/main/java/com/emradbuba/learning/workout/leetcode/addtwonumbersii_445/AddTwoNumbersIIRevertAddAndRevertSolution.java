@@ -13,14 +13,10 @@ public class AddTwoNumbersIIRevertAddAndRevertSolution implements AddTwoNumbersI
 
     private ListNode revertList(ListNode head) {
         if (head.next == null) {
-            return new ListNode(head.val);
+            return head;
         }
         ListNode newListHead = revertList(head.next);
-        ListNode newListTail = newListHead;
-        while (newListTail.next != null) {
-            newListTail = newListTail.next;
-        }
-        newListTail.next = head;
+        head.next.next = head;
         head.next = null;
         return newListHead;
     }
