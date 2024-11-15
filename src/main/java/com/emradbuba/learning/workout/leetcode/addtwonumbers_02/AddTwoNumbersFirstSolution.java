@@ -1,6 +1,6 @@
 package com.emradbuba.learning.workout.leetcode.addtwonumbers_02;
 
-public class AddTwoNumbersFirstApproach implements AddTwoNumbersSolution {
+public class AddTwoNumbersFirstSolution implements AddTwoNumbersSolution {
 
     // Actual solution method:
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {

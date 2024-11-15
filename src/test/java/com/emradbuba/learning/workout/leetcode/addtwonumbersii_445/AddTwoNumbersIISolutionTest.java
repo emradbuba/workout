@@ -1,4 +1,4 @@
-package com.emradbuba.learning.workout.leetcode.addtwonumbers_02;
+package com.emradbuba.learning.workout.leetcode.addtwonumbersii_445;
 
 import com.emradbuba.learning.workout.leetcode.TestAllImplementations;
 import org.junit.jupiter.params.provider.Arguments;
@@ -7,10 +7,10 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class AddTwoNumbersTwoSumBasicSolutionTest {
+class AddTwoNumbersIISolutionTest {
 
     @TestAllImplementations
-    void shouldReturnCorrectListForTwo3DigitNumbers(AddTwoNumbersSolution addTwoNumbersSolution) {
+    void shouldReturnCorrectListForTwo3DigitNumbers(String solutionName, AddTwoNumbersIISolution addTwoNumbersSolution) {
         ListNode firstList = TestUtils.createListNodeForNumber("123");
         ListNode secondList = TestUtils.createListNodeForNumber("123");
 
@@ -21,7 +21,7 @@ class AddTwoNumbersTwoSumBasicSolutionTest {
     }
 
     @TestAllImplementations
-    void shouldReturnCorrectListForTwo3DigitNumbersAnd4DigitsSum(AddTwoNumbersSolution addTwoNumbersSolution) {
+    void shouldReturnCorrectListForTwo3DigitNumbersAnd4DigitsSum(String solutionName, AddTwoNumbersIISolution addTwoNumbersSolution) {
         ListNode firstList = TestUtils.createListNodeForNumber("923");
         ListNode secondList = TestUtils.createListNodeForNumber("923");
 
@@ -32,7 +32,7 @@ class AddTwoNumbersTwoSumBasicSolutionTest {
     }
 
     @TestAllImplementations
-    void shouldReturnCorrectListForTwo3DigitNumbersAnd4DigitsSumWithManyDecimalMoves(AddTwoNumbersSolution addTwoNumbersSolution) {
+    void shouldReturnCorrectListForTwo3DigitNumbersAnd4DigitsSumWithManyDecimalMoves(String solutionName, AddTwoNumbersIISolution addTwoNumbersSolution) {
         ListNode firstList = TestUtils.createListNodeForNumber("987");
         ListNode secondList = TestUtils.createListNodeForNumber("789");
 
@@ -43,7 +43,7 @@ class AddTwoNumbersTwoSumBasicSolutionTest {
     }
 
     @TestAllImplementations
-    void shouldReturnCorrectListFor3DigitAnd6DigitNumbers(AddTwoNumbersSolution addTwoNumbersSolution) {
+    void shouldReturnCorrectListFor3DigitAnd6DigitNumbers(String solutionName, AddTwoNumbersIISolution addTwoNumbersSolution) {
         ListNode firstList = TestUtils.createListNodeForNumber("123");
         ListNode secondList = TestUtils.createListNodeForNumber("123456");
 
@@ -54,7 +54,7 @@ class AddTwoNumbersTwoSumBasicSolutionTest {
     }
 
     @TestAllImplementations
-    void shouldReturnCorrectListFor3DigitAnd6DigitNumbersWith7DigitsSum(AddTwoNumbersSolution addTwoNumbersSolution) {
+    void shouldReturnCorrectListFor3DigitAnd6DigitNumbersWith7DigitsSum(String solutionName, AddTwoNumbersIISolution addTwoNumbersSolution) {
         ListNode firstList = TestUtils.createListNodeForNumber("999");
         ListNode secondList = TestUtils.createListNodeForNumber("999993");
 
@@ -65,7 +65,7 @@ class AddTwoNumbersTwoSumBasicSolutionTest {
     }
 
     @TestAllImplementations
-    void shouldReturnCorrectListForTwo1DigitNumber(AddTwoNumbersSolution addTwoNumbersSolution) {
+    void shouldReturnCorrectListForTwo1DigitNumber(String solutionName, AddTwoNumbersIISolution addTwoNumbersSolution) {
         ListNode firstList = TestUtils.createListNodeForNumber("1");
         ListNode secondList = TestUtils.createListNodeForNumber("8");
 
@@ -76,7 +76,7 @@ class AddTwoNumbersTwoSumBasicSolutionTest {
     }
 
     @TestAllImplementations
-    void shouldReturnCorrectListWhenFirstIsZero(AddTwoNumbersSolution addTwoNumbersSolution) {
+    void shouldReturnCorrectListWhenFirstIsZero(String solutionName, AddTwoNumbersIISolution addTwoNumbersSolution) {
         ListNode firstList = TestUtils.createListNodeForNumber("0");
         ListNode secondList = TestUtils.createListNodeForNumber("123");
 
@@ -87,7 +87,7 @@ class AddTwoNumbersTwoSumBasicSolutionTest {
     }
 
     @TestAllImplementations
-    void shouldReturnCorrectListWhenSecondIsZero(AddTwoNumbersSolution addTwoNumbersSolution) {
+    void shouldReturnCorrectListWhenSecondIsZero(String solutionName, AddTwoNumbersIISolution addTwoNumbersSolution) {
         ListNode firstList = TestUtils.createListNodeForNumber("123");
         ListNode secondList = TestUtils.createListNodeForNumber("0");
 
@@ -98,7 +98,7 @@ class AddTwoNumbersTwoSumBasicSolutionTest {
     }
 
     @TestAllImplementations
-    void shouldReturnCorrectListWhenBothAreZeros(AddTwoNumbersSolution addTwoNumbersSolution) {
+    void shouldReturnCorrectListWhenBothAreZeros(String solutionName, AddTwoNumbersIISolution addTwoNumbersSolution) {
         ListNode firstList = TestUtils.createListNodeForNumber("0");
         ListNode secondList = TestUtils.createListNodeForNumber("0");
 
@@ -109,11 +109,7 @@ class AddTwoNumbersTwoSumBasicSolutionTest {
     }
 
     static Stream<Arguments> allImplementations() {
-        return Stream.of(
-                Arguments.of(new AddTwoNumbersFirstApproach()),
-                Arguments.of(new AddTwoNumbersUsingBigInteger()),
-                Arguments.of(new AddTwoNumbersFirstApproachRefactored()),
-                Arguments.of(new AddTwoNumbersFirstApproachRefactoredInitNode())
-        );
+        return Stream.of(Arguments.of("BasicSolution", new AddTwoNumbersIIRevertAddAndRevertSolution()));
     }
+
 }

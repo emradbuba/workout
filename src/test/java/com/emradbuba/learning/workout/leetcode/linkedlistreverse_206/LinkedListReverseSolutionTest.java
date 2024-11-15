@@ -65,6 +65,7 @@ class LinkedListReverseSolutionTest {
         return Stream.of(
                 Arguments.of("Reverse pointer solution", new LinkedListReverseInvertPointerSolution()),
                 Arguments.of("Recursive solution", new LinkedListReverseRecursiveSolution()),
+                Arguments.of("Recursive solution", new LinkedListReverseRecursiveWithoutWhileSolution()),
                 Arguments.of("Mentoring solution", new LinkedListReverseCopingSolution())
         );
     }
