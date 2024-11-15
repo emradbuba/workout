@@ -110,9 +110,10 @@ class AddTwoNumbersTwoSumBasicSolutionTest {
 
     static Stream<Arguments> allImplementations() {
         return Stream.of(
-                Arguments.of(new AddTwoNumbersFirstApproach()),
-                Arguments.of(new AddTwoNumbersUsingBigInteger()),
-                Arguments.of(new AddTwoNumbersFirstApproachRefactored()),
+                Arguments.of(new AddTwoNumbersFirstSolution()),
+                Arguments.of(new AddTwoNumbersBigIntegerSolution()),
+                Arguments.of(new AddTwoNumbersFirstRefactoredSolution()),
+                Arguments.of(new AddTwoNumbersRecapSolution()),
                 Arguments.of(new AddTwoNumbersFirstApproachRefactoredInitNode())
         );
     }

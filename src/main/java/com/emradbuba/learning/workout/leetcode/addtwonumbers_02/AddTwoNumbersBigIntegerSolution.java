@@ -2,7 +2,7 @@ package com.emradbuba.learning.workout.leetcode.addtwonumbers_02;
 
 import java.math.BigInteger;
 
-public class AddTwoNumbersUsingBigInteger implements AddTwoNumbersSolution {
+public class AddTwoNumbersBigIntegerSolution implements AddTwoNumbersSolution {
 
     public ListNode addTwoNumbers(ListNode firstList, ListNode secondList) {
         BigInteger firstListAsBigInt = new BigInteger(createRealNumberFromList(firstList));
