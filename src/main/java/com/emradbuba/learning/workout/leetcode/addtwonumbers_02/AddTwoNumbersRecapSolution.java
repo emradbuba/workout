@@ -1,26 +1,23 @@
 package com.emradbuba.learning.workout.leetcode.addtwonumbers_02;
 
 public class AddTwoNumbersRecapSolution implements AddTwoNumbersSolution {
+
     @Override
-    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        ListNode newListDummyHead = new ListNode();
-        ListNode recentlyAdded = newListDummyHead;
-        ListNode firstPointer = l1, secondPointer = l2;
+    public ListNode addTwoNumbers(ListNode list1, ListNode list2) {
+        ListNode fakeHeadNode = new ListNode();
+        ListNode recentlyAdded = fakeHeadNode;
         int inMemory = 0;
-        while (firstPointer != null || secondPointer != null) {
-            int sum = (firstPointer != null ? firstPointer.val : 0)
-                    + (secondPointer != null ? secondPointer.val : 0)
+        while (list1 != null || list2 != null || inMemory > 0) {
+            int sum = (list1 != null ? list1.val : 0)
+                    + (list2 != null ? list2.val : 0)
                     + inMemory;
             inMemory = sum / 10;
             ListNode newNode = new ListNode(sum - inMemory * 10);
             recentlyAdded.next = newNode;
             recentlyAdded = newNode;
-            firstPointer = firstPointer == null ? null : firstPointer.next;
-            secondPointer = secondPointer == null ? null : secondPointer.next;
+            list1 = list1 == null ? null : list1.next;
+            list2 = list2 == null ? null : list2.next;
         }
-        if (inMemory > 0) {
-            recentlyAdded.next = new ListNode(inMemory);
-        }
-        return newListDummyHead.next;
+        return fakeHeadNode.next;
     }
 }
