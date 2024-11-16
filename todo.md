@@ -6,6 +6,6 @@
 <br>
 [ ] ArrayList vs LinedList vs Array in Java<br>
 <br>
-[ ] Binary Search - finish (https://leetcode.com/problems/binary-search/) <br>
+[OK] <strike>Binary Search - finish (https://leetcode.com/problems/binary-search/) </strike> <br>
 [ ] Sliding Window <br>
 [ ] Sliding Window with printing the indexes <br>

@@ -158,8 +158,8 @@ class BinarySearchSolutionTest {
 
     static Stream<Arguments> allImplementations() {
         return Stream.of(
-                Arguments.of("Recursive solution", new BinarySearchRecursiveSolution())git
-                //Arguments.of("Recursive loop-based solution", new BinarySearchLoopRecursiveSolution())
+                Arguments.of("Recursive solution", new BinarySearchRecursiveSolution()),
+                Arguments.of("Recursive loop-based solution", new BinarySearchLoopRecursiveSolution())
         );
     }
 
