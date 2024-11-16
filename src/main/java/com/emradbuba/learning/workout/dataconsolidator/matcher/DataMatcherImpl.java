@@ -49,11 +49,10 @@ public class DataMatcherImpl<T> implements DataMatcher<T> {
         );
     }
 
-    private Set<Integer> retrieveKeysNotExistingInSecondMap(Map<Integer, LinkedList<T>> mapA, Map<Integer,
-            LinkedList<T>> mapB) {
-        return mapA.keySet()
+    private Set<Integer> retrieveKeysNotExistingInSecondMap(Map<Integer, LinkedList<T>> firstMap, Map<Integer, LinkedList<T>> secondMap) {
+        return firstMap.keySet()
                 .stream()
-                .filter(key -> !mapB.containsKey(key))
+                .filter(key -> !secondMap.containsKey(key))
                 .collect(Collectors.toSet());
     }
 

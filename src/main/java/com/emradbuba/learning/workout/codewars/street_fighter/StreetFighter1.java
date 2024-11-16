@@ -20,16 +20,12 @@ public class StreetFighter1 {
     }
 
     private static int[] calcNewPosition(int[] fromPosition, String move) {
-        switch (move) {
-            case "up":
-                return new int[]{0, fromPosition[COL]};
-            case "down":
-                return new int[]{1, fromPosition[COL]};
-            case "left":
-                return new int[]{fromPosition[ROW], (fromPosition[COL] + 5) % 6};
-            case "right":
-                return new int[]{fromPosition[ROW], (fromPosition[COL] + 1) % 6};
-        }
-        throw new IllegalStateException("Unknown move?");
+        return switch (move) {
+            case "up" -> new int[]{0, fromPosition[COL]};
+            case "down" -> new int[]{1, fromPosition[COL]};
+            case "left" -> new int[]{fromPosition[ROW], (fromPosition[COL] + 5) % 6};
+            case "right" -> new int[]{fromPosition[ROW], (fromPosition[COL] + 1) % 6};
+            default -> throw new IllegalStateException("Unknown move?");
+        };
     }
 }

@@ -165,9 +165,9 @@ class DataMatcherImplCustomRecordTest {
         System.out.println(result);
     }
 
-    private static CustomRecord RECORD_A_10_10_DUC_EUC = new CustomRecord(10.0, 10, Ticker.DUC, Counterparty.EUC);
-    private static CustomRecord RECORD_B_20_10_DUC_EUC = new CustomRecord(20.0, 10, Ticker.DUC, Counterparty.EUC);
-    private static CustomRecord RECORD_C_10_20_DUC_EUC = new CustomRecord(10.0, 20, Ticker.DUC, Counterparty.EUC);
-    private static CustomRecord RECORD_D_10_10_M20_EUC = new CustomRecord(10.0, 10, Ticker.M20, Counterparty.EUC);
-    private static CustomRecord RECORD_E_10_10_DUC_INS = new CustomRecord(10.0, 10, Ticker.DUC, Counterparty.INS);
+    private static final CustomRecord RECORD_A_10_10_DUC_EUC = new CustomRecord(10.0, 10, Ticker.DUC, Counterparty.EUC);
+    private static final CustomRecord RECORD_B_20_10_DUC_EUC = new CustomRecord(20.0, 10, Ticker.DUC, Counterparty.EUC);
+    private static final CustomRecord RECORD_C_10_20_DUC_EUC = new CustomRecord(10.0, 20, Ticker.DUC, Counterparty.EUC);
+    private static final CustomRecord RECORD_D_10_10_M20_EUC = new CustomRecord(10.0, 10, Ticker.M20, Counterparty.EUC);
+    private static final CustomRecord RECORD_E_10_10_DUC_INS = new CustomRecord(10.0, 10, Ticker.DUC, Counterparty.INS);
 }

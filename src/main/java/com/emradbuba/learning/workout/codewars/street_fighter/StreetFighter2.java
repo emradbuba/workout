@@ -21,27 +21,31 @@ public class StreetFighter2 {
     private static int[] calcNewPosition(String[][] fighters, int[] fromPosition, String move) {
         int numberOfRows = fighters.length;
         int numberOfCols = fighters[0].length;
-        switch (move) {
-            case "up":
-                int newRow = fromPosition[ROW] > 0 && !(fighters[fromPosition[ROW] - 1][fromPosition[COL]].equals("")) ? fromPosition[ROW] - 1 : fromPosition[ROW];
-                return new int[]{newRow, fromPosition[COL]};
-            case "down":
-                int newRow2 = fromPosition[ROW] < numberOfRows - 1 && !(fighters[fromPosition[ROW] + 1][fromPosition[COL]].equals("")) ? fromPosition[ROW] + 1 : fromPosition[ROW];
-                return new int[]{newRow2, fromPosition[COL]};
-            case "left":
+        return switch (move) {
+            case "up" -> {
+                int newRow = fromPosition[ROW] > 0 && !(fighters[fromPosition[ROW] - 1][fromPosition[COL]].isEmpty()) ? fromPosition[ROW] - 1 : fromPosition[ROW];
+                yield new int[]{newRow, fromPosition[COL]};
+            }
+            case "down" -> {
+                int newRow2 = fromPosition[ROW] < numberOfRows - 1 && !(fighters[fromPosition[ROW] + 1][fromPosition[COL]].isEmpty()) ? fromPosition[ROW] + 1 : fromPosition[ROW];
+                yield new int[]{newRow2, fromPosition[COL]};
+            }
+            case "left" -> {
                 int newColumn = fromPosition[COL];
                 do {
                     newColumn = (newColumn + numberOfCols - 1) % numberOfCols;
-                } while (fighters[fromPosition[ROW]][newColumn].equals(""));
-                return new int[]{fromPosition[ROW], newColumn};
-            case "right":
+                } while (fighters[fromPosition[ROW]][newColumn].isEmpty());
+                yield new int[]{fromPosition[ROW], newColumn};
+            }
+            case "right" -> {
                 int newColumnR = fromPosition[COL];
                 do {
                     newColumnR = (newColumnR + 1) % numberOfCols;
-                } while (fighters[fromPosition[ROW]][newColumnR].equals(""));
-                return new int[]{fromPosition[ROW], newColumnR};
-        }
-        throw new IllegalStateException("Unknown move?");
+                } while (fighters[fromPosition[ROW]][newColumnR].isEmpty());
+                yield new int[]{fromPosition[ROW], newColumnR};
+            }
+            default -> throw new IllegalStateException("Unknown move?");
+        };
     }
 
 }

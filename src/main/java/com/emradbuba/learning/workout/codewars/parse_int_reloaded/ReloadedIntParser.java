@@ -96,7 +96,7 @@ public class ReloadedIntParser {
         put("seven", "7");
         put("eight", "8");
         put("nine", "9");
-        put("ten", "1");
+        put("ten", "10");
         put("eleven", "11");
         put("twelve", "12");
         put("thirteen", "13");

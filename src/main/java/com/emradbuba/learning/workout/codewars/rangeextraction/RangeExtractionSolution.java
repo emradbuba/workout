@@ -6,9 +6,9 @@ import java.util.stream.Collectors;
 
 public class RangeExtractionSolution {
 
-    private final static int MIN_SEQUENCE_LENGTH = 3;
-    private final static int MAX_ACCEPTED_INTERVAL_IN_SEQUENCE = 1;
-    private final static String SEPARATOR = ",";
+    private static final int MIN_SEQUENCE_LENGTH = 3;
+    private static final int MAX_ACCEPTED_INTERVAL_IN_SEQUENCE = 1;
+    private static final String SEPARATOR = ",";
 
     public static String rangeExtraction(int[] inputArray) {
         List<String> result = new ArrayList<>();

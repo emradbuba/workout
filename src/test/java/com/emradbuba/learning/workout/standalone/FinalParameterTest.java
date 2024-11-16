@@ -10,14 +10,14 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class FinalParameterTest {
+class FinalParameterTest {
 
     private static final Logger LOG = Logger.getLogger(FinalParameterTest.class.getName());
     private static final String MODIFIED_PREFIX = "MOD_";
 
 
     @Test
-    public void testFinalParameter(){
+    void testFinalParameter(){
         FinalParameterTest testClass = new FinalParameterTest();
         LOG.info("Creating Radek");
         final Person radek = new Person("Radek", "Em");
@@ -28,13 +28,13 @@ public class FinalParameterTest {
     }
 
     @Test
-    public void testFinalArrayParameter(){
+    void testFinalArrayParameter(){
         FinalParameterTest testClass = new FinalParameterTest();
         LOG.info("Creating inital list with one item");
         List<Person> theList = Stream.of(new Person("Radek", "Em")).collect(Collectors.toList());
-        assertEquals(theList.size(), 1);
+        assertEquals(1, theList.size());
         testClass.processPersonList(theList);
-        assertEquals(theList.size(), 3);
+        assertEquals(3, theList.size());
         LOG.info("List after modification: " + theList);
     }
 

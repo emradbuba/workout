@@ -4,8 +4,10 @@ import java.util.Random;
 
 public class ListNode {
 
+    private static final Random rnd = new Random();
+
     int val;
-    final int id = new Random().nextInt(100);
+    final int id = rnd.nextInt(100);
     ListNode next;
 
     ListNode() {

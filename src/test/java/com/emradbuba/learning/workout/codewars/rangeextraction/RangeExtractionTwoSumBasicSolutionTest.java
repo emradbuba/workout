@@ -6,10 +6,10 @@ import java.util.stream.IntStream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class RangeExtractionTwoSumBasicSolutionTest {
+class RangeExtractionTwoSumBasicSolutionTest {
 
     @Test
-    public void shouldReturnCorrectResultForPositiveSequenceWithoutRanges() {
+    void shouldReturnCorrectResultForPositiveSequenceWithoutRanges() {
         int[] inputArray = new int[]{1, 3, 5, 7, 9};
         String expectedOutput = "1,3,5,7,9";
 
@@ -18,7 +18,7 @@ public class RangeExtractionTwoSumBasicSolutionTest {
     }
 
     @Test
-    public void shouldReturnCorrectResultForPositiveSequenceWithoutRangesOfThree() {
+    void shouldReturnCorrectResultForPositiveSequenceWithoutRangesOfThree() {
         int[] inputArray = new int[]{1, 2, 4, 5, 7, 8};
         String expectedOutput = "1,2,4,5,7,8";
 
@@ -27,7 +27,7 @@ public class RangeExtractionTwoSumBasicSolutionTest {
     }
 
     @Test
-    public void shouldReturnCorrectResultForPositiveSequenceAllInRange() {
+    void shouldReturnCorrectResultForPositiveSequenceAllInRange() {
         int[] inputArray = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         String expectedOutput = "1-10";
 
@@ -36,7 +36,7 @@ public class RangeExtractionTwoSumBasicSolutionTest {
     }
 
     @Test
-    public void shouldReturnCorrectResultForPositiveSequenceWithRangeInside() {
+    void shouldReturnCorrectResultForPositiveSequenceWithRangeInside() {
         int[] inputArray = new int[]{1, 3, 5, 6, 7, 8, 10};
         String expectedOutput = "1,3,5-8,10";
 
@@ -45,7 +45,7 @@ public class RangeExtractionTwoSumBasicSolutionTest {
     }
 
     @Test
-    public void shouldReturnCorrectResultForPositiveSequenceWithRangeAtTheBeginning() {
+    void shouldReturnCorrectResultForPositiveSequenceWithRangeAtTheBeginning() {
         int[] inputArray = new int[]{1, 2, 3, 4, 5, 7, 8, 10};
         String expectedOutput = "1-5,7,8,10";
 
@@ -54,7 +54,7 @@ public class RangeExtractionTwoSumBasicSolutionTest {
     }
 
     @Test
-    public void shouldReturnCorrectResultForPositiveSequenceWithRangeAtTheEnd() {
+    void shouldReturnCorrectResultForPositiveSequenceWithRangeAtTheEnd() {
         int[] inputArray = new int[]{1, 3, 5, 6, 8, 9, 10};
         String expectedOutput = "1,3,5,6,8-10";
 
@@ -63,7 +63,7 @@ public class RangeExtractionTwoSumBasicSolutionTest {
     }
 
     @Test
-    public void shouldReturnCorrectResultForMinusOneToPlusOneSequence() {
+    void shouldReturnCorrectResultForMinusOneToPlusOneSequence() {
         int[] inputArray = new int[]{-1, 0, 1};
         String expectedOutput = "-1-1";
 
@@ -72,7 +72,7 @@ public class RangeExtractionTwoSumBasicSolutionTest {
     }
 
     @Test
-    public void shouldReturnCorrectResultForTwoRangesWithNegatives() {
+    void shouldReturnCorrectResultForTwoRangesWithNegatives() {
         int[] inputArray = new int[]{-5, -4, -3, -1, 0, 1, 2, 3};
         String expectedOutput = "-5--3,-1-3";
 
@@ -81,7 +81,7 @@ public class RangeExtractionTwoSumBasicSolutionTest {
     }
 
     @Test
-    public void shouldReturnCorrectResultWithDoubleMinusSign() {
+    void shouldReturnCorrectResultWithDoubleMinusSign() {
         int[] inputArray = new int[]{-9, -8, -7, -5, -4, -3, -1};
         String expectedOutput = "-9--7,-5--3,-1";
 
@@ -90,7 +90,7 @@ public class RangeExtractionTwoSumBasicSolutionTest {
     }
 
     @Test
-    public void shouldReturnCorrectResultForOneElement() {
+    void shouldReturnCorrectResultForOneElement() {
         int[] inputArray = new int[]{-6};
         String expectedOutput = "-6";
 
@@ -99,7 +99,7 @@ public class RangeExtractionTwoSumBasicSolutionTest {
     }
 
     @Test
-    public void shouldReturnCorrectResultForTwoElements() {
+    void shouldReturnCorrectResultForTwoElements() {
         int[] inputArray = new int[]{-6, -5};
         String expectedOutput = "-6,-5";
 
@@ -108,7 +108,7 @@ public class RangeExtractionTwoSumBasicSolutionTest {
     }
 
     @Test
-    public void shouldReturnCorrectResultForTenMilionElements() {
+    void shouldReturnCorrectResultForTenMilionElements() {
         int[] inputArray = IntStream.range(1, 100001).toArray();
         String expectedOutput = "1-100000";
 

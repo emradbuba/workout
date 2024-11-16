@@ -14,13 +14,13 @@ public class StreetFighter2Test {
     };
 
     @Test
-    public void shouldWorkWithNoMoves() {
+    void shouldWorkWithNoMoves() {
         String[] solution = new String[]{};
         assertArrayEquals(solution, StreetFighter2.superStreetFighterize(fighters, new int[]{0,1}, new String[]{}));
     }
 
     @Test
-    public void shouldWorkWithFewMoves(){
+    void shouldWorkWithFewMoves(){
         String[] moves = new String[] { "up", "left", "right", "left", "left" };
         int[] position = new int[] {1,1};
         String[] solution = new String[] { "Ryu", "Guile", "Ryu", "Guile", "Blanka" };
@@ -28,7 +28,7 @@ public class StreetFighter2Test {
     }
 
     @Test
-    public void shouldStopOnEmptySpacesVertically(){
+    void shouldStopOnEmptySpacesVertically(){
         String[] moves = new String[] { "up" };
         int[] position = new int[] {1,0};
         String[] solution = new String[] { "Balrog" };
@@ -36,7 +36,7 @@ public class StreetFighter2Test {
     }
 
     @Test
-    public void shouldStopOnEmptySpacesVertically2(){
+    void shouldStopOnEmptySpacesVertically2(){
         String[] moves = new String[] { "up", "up", "up", "up" };
         int[] position = new int[] {1,0};
         String[] solution = new String[] { "Balrog", "Balrog", "Balrog", "Balrog" };
@@ -44,7 +44,7 @@ public class StreetFighter2Test {
     }
 
     @Test
-    public void shouldStopVertically(){
+    void shouldStopVertically(){
         String[] moves = new String[] { "down", "down", "down", "down" };
         int[] position = new int[] {1,0};
         String[] solution = new String[] { "Vega", "Vega", "Vega", "Vega" };
@@ -52,7 +52,7 @@ public class StreetFighter2Test {
     }
 
     @Test
-    public void shouldStopOnEmptySpacesVertically3(){
+    void shouldStopOnEmptySpacesVertically3(){
         String[] moves = new String[] { "up", "up", "up", "up" };
         int[] position = new int[] {1,5};
         String[] solution = new String[] { "Sagat", "Sagat", "Sagat", "Sagat" };
@@ -60,7 +60,7 @@ public class StreetFighter2Test {
     }
 
     @Test
-    public void shouldStopVertically4(){
+    void shouldStopVertically4(){
         String[] moves = new String[] { "down", "down", "down", "down" };
         int[] position = new int[] {1,5};
         String[] solution = new String[] { "M.Bison", "M.Bison", "M.Bison", "M.Bison" };
@@ -68,7 +68,7 @@ public class StreetFighter2Test {
     }
 
     @Test
-    public void shouldRotateHorizontallyWithEmptySpaces(){
+    void shouldRotateHorizontallyWithEmptySpaces(){
         String[] moves = new String[] { "right", "right", "right", "right", "right", "right", "right", "right" };
         int[] position = new int[] {0,2};
         String[] solution = new String[] { "Blanka", "Guile", "Ryu", "E.Honda", "Blanka", "Guile", "Ryu", "E.Honda" };
@@ -76,7 +76,7 @@ public class StreetFighter2Test {
     }
 
     @Test
-    public void shouldRotateHorizontally(){
+    void shouldRotateHorizontally(){
         String[] moves = new String[] { "left", "left", "left", "left", "left", "left", "left", "left" };
         int[] position = new int[] {1,3};
         String[] solution = new String[] { "Chun Li", "Ken", "Balrog", "Sagat", "Dhalsim", "Zangief", "Chun Li", "Ken" };
@@ -84,7 +84,7 @@ public class StreetFighter2Test {
     }
 
     @Test
-    public void shouldRotateOnAllRows(){
+    void shouldRotateOnAllRows(){
         String[] moves = new String[] { "right", "right", "right", "right", "right", "right", "down", "left", "left", "left", "left", "left", "left", "left", "left", "left", "left", "left", "left", "down", "right", "right", "right", "right", "right", "right", "right", "right", "right", "right", "right", "right" };
         int[] position = new int[] {0,2};
         String[] solution = new String[] {"Blanka", "Guile", "Ryu", "E.Honda", "Blanka", "Guile", "Dhalsim", "Zangief", "Chun Li", "Ken", "Balrog", "Sagat", "Dhalsim", "Zangief", "Chun Li", "Ken", "Balrog", "Sagat", "Dhalsim", "Cammy", "M.Bison", "Vega", "T.Hawk", "Fei Long", "Deejay", "Cammy", "M.Bison", "Vega", "T.Hawk", "Fei Long", "Deejay", "Cammy"};
@@ -100,7 +100,7 @@ public class StreetFighter2Test {
     };
 
     @Test
-    public void shouldRotateOnAllRows3(){
+    void shouldRotateOnAllRows3(){
         String[] moves = new String[] { "right", "right", "right", "right", "right", "right", "down", "left", "left", "left", "left", "left", "left", "left", "left", "left", "left", "left", "left", "down", "right", "right", "right", "right", "right", "right", "right", "right", "right", "right", "right", "right" };
         int[] position = new int[] {0,2};
         String[] solution = new String[] {"Cammy", "Blanka", "Guile", "Chun Li", "Ryu", "E.Honda", "Chun Li", "Ken", "Balrog", "Sagat", "Dhalsim", "Zangief", "M.Bison", "Chun Li", "Ken", "Balrog", "Sagat", "Dhalsim", "Zangief", "Cammy", "T.Hawk", "Vega", "Fei Long", "Balrog", "Deejay", "Cammy", "T.Hawk", "Vega", "Fei Long", "Balrog", "Deejay", "Cammy"};
@@ -108,7 +108,7 @@ public class StreetFighter2Test {
     }
 
     @Test
-    public void shouldJustWork3(){
+    void shouldJustWork3(){
         String[] moves = new String[] {"down", "right", "right", "right", "down", "left", "left", "down", "right", "right", "right", "up" };
         int[] position = new int[] {0,3};
         String[] solution = new String[] {"Cammy", "Blanka", "Guile", "Chun Li", "Sagat", "Dhalsim", "Zangief", "Cammy", "T.Hawk", "Vega", "Fei Long", "Chun Li"};
@@ -125,7 +125,7 @@ public class StreetFighter2Test {
     };
 
     @Test
-    public void shouldWorkWithLongerGrid4(){
+    void shouldWorkWithLongerGrid4(){
         String[] moves = new String[] {"left", "left", "down", "right", "right", "right", "right", "down", "left", "left", "left", "left", "down", "right", "right", "down", "right", "right", "right", "down", "left", "left", "left", "down", "left", "left", "left"};
         int[] position = new int[] {0,3};
         String[] solution = new String[] {"E.Honda", "Ryu", "Ken", "Chun Li", "Balrog", "Ken", "Chun Li", "Fei Long", "Vega", "Balrog", "Fei Long", "Vega", "Blanka", "Guile", "Chun Li", "Sagat", "M.Bison", "Zangief", "Dhalsim", "Dhalsim", "Zangief", "M.Bison", "Sagat", "T.Hawk", "Cammy", "Deejay", "T.Hawk"};
@@ -133,7 +133,7 @@ public class StreetFighter2Test {
     }
 
     @Test
-    public void shouldWorkWithOddInitialPosition(){
+    void shouldWorkWithOddInitialPosition(){
         String[] moves = new String[] {"left", "left", "down", "right", "right", "right", "right", "down", "left", "left", "left", "left", "up", "right", "right", "up", "right", "right", "right"};
         int[] position = new int[] {3,3};
         String[] solution = new String[] {"Guile", "Blanka", "M.Bison", "Zangief", "Dhalsim", "Sagat", "M.Bison", "Deejay", "T.Hawk", "Cammy", "Deejay", "T.Hawk", "Sagat", "M.Bison", "Zangief", "Guile", "Chun Li", "Blanka", "Guile"};

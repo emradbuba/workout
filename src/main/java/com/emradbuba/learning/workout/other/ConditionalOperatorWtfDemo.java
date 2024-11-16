@@ -21,6 +21,7 @@ public class ConditionalOperatorWtfDemo {
         // As a consequence, while evaluating a final value of the conditional expression,
         // Java tries to unbox the second operand what (because it's null) leads to a NPE.
         //
+        //Ignore Sonar
         Double resultValue = isTrue ? valueIfTrue : valueIfFalse;  // boolean ? Double : double  --> Java tries to unbox the Double which is null
         LOG.info("Result value is: " + resultValue);
     }
