@@ -109,7 +109,8 @@ class AddTwoNumbersIISolutionTest {
     }
 
     static Stream<Arguments> allImplementations() {
-        return Stream.of(Arguments.of("BasicSolution", new AddTwoNumbersIIRevertingSolution()));
+        //return Stream.of(Arguments.of("BasicSolution", new AddTwoNumbersIIRevertingSolution()));
+        return Stream.of(Arguments.of("BasicSolution", new AddTwoNumbersIIRevertingWorkoutSolution()));
     }
 
 }
