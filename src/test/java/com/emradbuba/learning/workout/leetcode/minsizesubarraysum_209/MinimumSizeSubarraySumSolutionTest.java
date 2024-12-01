@@ -58,7 +58,7 @@ class MinimumSizeSubarraySumSolutionTest {
 
     static Stream<Arguments> allImplementations() {
         return Stream.of(
-                Arguments.of("First solution", new MinimumSizeSubarraySumWrokoutSolution())
+                Arguments.of("First solution", new MinimumSizeSubarraySumWorkoutSolution())
         );
     }
 }
