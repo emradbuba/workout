@@ -113,7 +113,7 @@ class AddTwoNumbersSolutionTest {
                 Arguments.of(new AddTwoNumbersFirstSolution()),
                 Arguments.of(new AddTwoNumbersBigIntegerSolution()),
                 Arguments.of(new AddTwoNumbersFirstRefactoredSolution()),
-                Arguments.of(new AddTwoNumbersRecapSolution()),
+                Arguments.of(new AddTwoNumbersWorkoutSolution()),
                 Arguments.of(new AddTwoNumbersFirstApproachRefactoredInitNode())
         );
     }
