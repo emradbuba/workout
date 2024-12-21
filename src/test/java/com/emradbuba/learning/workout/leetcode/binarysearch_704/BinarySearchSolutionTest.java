@@ -160,7 +160,8 @@ class BinarySearchSolutionTest {
         return Stream.of(
                 Arguments.of("Recursive solution", new BinarySearchRecursiveSolution()),
                 Arguments.of("Recursive solution workout sessions", new BinarySearchRecursiveWorkoutSolution()),
-                Arguments.of("Recursive loop-based solution", new BinarySearchWorkout())
+                Arguments.of("Recursive loop-based solution", new BinarySearchWorkout()),
+                Arguments.of("Recursive loop-based solution", new BinarySearchWorkout241221())
         );
     }
 
