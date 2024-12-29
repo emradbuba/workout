@@ -6,16 +6,17 @@ public class MinimumSizeSubarraySumWorkoutSolution implements MinimumSizeSubarra
         int currentLength = 0;
         int currentSum = 0;
         int leftIdx = 0;
-        int result = Integer.MAX_VALUE;
+        int minLength = Integer.MAX_VALUE;
 
         for (int currentValue : nums) {
             currentSum += currentValue;
             currentLength++;
             while (currentSum >= target) {
-                result = Math.min(result, currentLength--);
+                minLength = Math.min(minLength, currentLength--);
+                if (minLength == 1) return 1;
                 currentSum -= nums[leftIdx++];
             }
         }
-        return result == Integer.MAX_VALUE ? 0 : result;
+        return minLength == Integer.MAX_VALUE ? 0 : minLength;
     }
 }
