@@ -36,7 +36,7 @@ class MinimumSizeSubarraySumBWorkoutSolutionTest {
 
         List<MinimumSizeSubarraySumBSolution.SolutionResult> solutionResults = solution.minSubArrayLen(6, new int[]{1, 1, 1, 1, 1});
 
-        assertNull(solutionResults);
+        assertTrue(solutionResults.isEmpty());
     }
 
     @TestAllImplementations

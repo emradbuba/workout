@@ -7,25 +7,25 @@ public class MinimumSizeSubarraySumBWorkoutSolution implements MinimumSizeSubarr
 
     @Override
     public List<SolutionResult> minSubArrayLen(int target, int[] nums) {
-        List<SolutionResult> results = new ArrayList<>();
+        List<SolutionResult> solutionResults = new ArrayList<>();
         int leftIdx = 0;
         int currentSum = 0;
-        int shortestLength = Integer.MAX_VALUE;
+        int minLength = Integer.MAX_VALUE;
 
         for (int rightIdx = 0; rightIdx < nums.length; rightIdx++) {
             currentSum += nums[rightIdx];
             while (currentSum >= target) {
                 int length = rightIdx - leftIdx + 1;
-                if (length < shortestLength) {
-                    results.clear();
-                    shortestLength = length;
+                if (length < minLength) {
+                    solutionResults.clear();
+                    minLength = length;
                 }
-                if (length == shortestLength) {
-                    results.add(new SolutionResult(leftIdx, rightIdx));
+                if (length == minLength) {
+                    solutionResults.add(new SolutionResult(leftIdx, rightIdx));
                 }
                 currentSum -= nums[leftIdx++];
             }
         }
-        return shortestLength == Integer.MAX_VALUE ? null : results;
+        return solutionResults;
     }
 }
