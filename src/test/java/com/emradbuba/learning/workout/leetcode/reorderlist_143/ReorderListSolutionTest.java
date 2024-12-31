@@ -23,6 +23,32 @@ class ReorderListSolutionTest {
     }
 
     @TestAllImplementations
+    void shouldCorrectlyReverseListWhenHappyCaseWithFourDigits(String solutionName, ReorderListSolution solution) {
+
+        ListNode originalList = TestUtils.createListNodeForNumber("1234");
+
+        ListNode newList = solution.reorderList(originalList);
+        String newListAsString = TestUtils.getListAsStringNumber(newList);
+
+        assertNotNull(newListAsString);
+        assertFalse(newListAsString.isEmpty());
+        assertEquals("1423", newListAsString);
+    }
+
+    @TestAllImplementations
+    void shouldCorrectlyReverseListWhenHappyCaseWithFiveDigits(String solutionName, ReorderListSolution solution) {
+
+        ListNode originalList = TestUtils.createListNodeForNumber("12345");
+
+        ListNode newList = solution.reorderList(originalList);
+        String newListAsString = TestUtils.getListAsStringNumber(newList);
+
+        assertNotNull(newListAsString);
+        assertFalse(newListAsString.isEmpty());
+        assertEquals("15243", newListAsString);
+    }
+
+    @TestAllImplementations
     void shouldCorrectlyReverseListWhenHappyCaseAndOdd(String solutionName, ReorderListSolution solution) {
 
         ListNode originalList = TestUtils.createListNodeForNumber("1234567");
