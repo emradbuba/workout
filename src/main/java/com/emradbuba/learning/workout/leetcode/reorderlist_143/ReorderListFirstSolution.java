@@ -1,25 +1,25 @@
 package com.emradbuba.learning.workout.leetcode.reorderlist_143;
 
 public class ReorderListFirstSolution implements ReorderListSolution {
+
     @Override
-    public void reorderList(ListNode head) { // [1][2][3][=4=][5][6][7] // [1][2][=3=][4][5][6]
+    public void reorderList(ListNode head) {
 
-        if(head == null || head.next == null || head.next.next == null) return;
+        if (head == null || head.next == null || head.next.next == null) return;
 
-        ListNode[] splittedLists = splitList(head);
-        ListNode secondList = revertList(splittedLists[1]); // [7][6][5] // [6][5][4]
+        ListNode secondList = splitList(head);
+        ListNode secondListReverted = revertList(secondList);
 
-
-        ListNode mergedList = mergeLists(head, secondList);
-
+        mergeLists(head, secondListReverted);
     }
 
-    private ListNode[] splitList(ListNode head) {
-        ListNode a, b;
-        for (a = head, b = head; b.next != null && b.next.next != null; a = a.next, b = b.next.next) ;
-        b = a.next;
-        a.next = null;
-        return new ListNode[]{head, b};
+    private ListNode splitList(ListNode head) {
+        ListNode lastInFirstList, firstInSecondList;
+        for (lastInFirstList = head, firstInSecondList = head; firstInSecondList.next != null && firstInSecondList.next.next != null; lastInFirstList = lastInFirstList.next, firstInSecondList = firstInSecondList.next.next)
+            ;
+        firstInSecondList = lastInFirstList.next;
+        lastInFirstList.next = null;
+        return firstInSecondList;
     }
 
     private ListNode revertList(ListNode head) {
@@ -32,29 +32,18 @@ public class ReorderListFirstSolution implements ReorderListSolution {
         return newHead;
     }
 
-    private ListNode mergeLists(ListNode head, ListNode secondList) {
-        // Merge list in such way, that HEAD is the original head...
-        // Adjust tests...
+    private void mergeLists(ListNode head, ListNode secondList) {
 
-        ListNode theHead = head;
-        ListNode recentlyAdded = head;
+        while (secondList != null) {
 
-        while (recentlyAdded != null || secondList != null) {
+            ListNode nextA = head.next;
+            ListNode nextB = secondList.next;
 
-            if ( != null) {
-                ListNode newNode = new ListNode(firstList.val);
-                recentlyAdded.next = newNode;
-                recentlyAdded = newNode;
-                firstList = firstList.next;
-            }
-            if (secondList != null) {
-                ListNode newNode = new ListNode(secondList.val);
-                recentlyAdded.next = newNode;
-                recentlyAdded = newNode;
-                secondList = secondList.next;
-            }
+            head.next = secondList;
+            secondList.next = nextA;
+            head = nextA;
+            secondList = nextB;
         }
 
-        return newList.next;
     }
 }

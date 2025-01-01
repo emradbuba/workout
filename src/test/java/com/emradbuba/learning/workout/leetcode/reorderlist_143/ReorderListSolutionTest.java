@@ -14,8 +14,8 @@ class ReorderListSolutionTest {
 
         ListNode originalList = TestUtils.createListNodeForNumber("123456");
 
-        ListNode newList = solution.reorderList(originalList);
-        String newListAsString = TestUtils.getListAsStringNumber(newList);
+        solution.reorderList(originalList);
+        String newListAsString = TestUtils.getListAsStringNumber(originalList);
 
         assertNotNull(newListAsString);
         assertFalse(newListAsString.isEmpty());
@@ -27,8 +27,8 @@ class ReorderListSolutionTest {
 
         ListNode originalList = TestUtils.createListNodeForNumber("1234");
 
-        ListNode newList = solution.reorderList(originalList);
-        String newListAsString = TestUtils.getListAsStringNumber(newList);
+        solution.reorderList(originalList);
+        String newListAsString = TestUtils.getListAsStringNumber(originalList);
 
         assertNotNull(newListAsString);
         assertFalse(newListAsString.isEmpty());
@@ -40,8 +40,8 @@ class ReorderListSolutionTest {
 
         ListNode originalList = TestUtils.createListNodeForNumber("12345");
 
-        ListNode newList = solution.reorderList(originalList);
-        String newListAsString = TestUtils.getListAsStringNumber(newList);
+        solution.reorderList(originalList);
+        String newListAsString = TestUtils.getListAsStringNumber(originalList);
 
         assertNotNull(newListAsString);
         assertFalse(newListAsString.isEmpty());
@@ -53,8 +53,8 @@ class ReorderListSolutionTest {
 
         ListNode originalList = TestUtils.createListNodeForNumber("1234567");
 
-        ListNode newList = solution.reorderList(originalList);
-        String newListAsString = TestUtils.getListAsStringNumber(newList);
+        solution.reorderList(originalList);
+        String newListAsString = TestUtils.getListAsStringNumber(originalList);
 
         assertNotNull(newListAsString);
         assertFalse(newListAsString.isEmpty());
@@ -66,8 +66,8 @@ class ReorderListSolutionTest {
 
         ListNode originalList = TestUtils.createListNodeForNumber("123");
 
-        ListNode newList = solution.reorderList(originalList);
-        String newListAsString = TestUtils.getListAsStringNumber(newList);
+        solution.reorderList(originalList);
+        String newListAsString = TestUtils.getListAsStringNumber(originalList);
 
         assertNotNull(newListAsString);
         assertFalse(newListAsString.isEmpty());
@@ -79,8 +79,8 @@ class ReorderListSolutionTest {
 
         ListNode originalList = TestUtils.createListNodeForNumber("12");
 
-        ListNode newList = solution.reorderList(originalList);
-        String newListAsString = TestUtils.getListAsStringNumber(newList);
+        solution.reorderList(originalList);
+        String newListAsString = TestUtils.getListAsStringNumber(originalList);
 
         assertNotNull(newListAsString);
         assertFalse(newListAsString.isEmpty());
@@ -92,8 +92,8 @@ class ReorderListSolutionTest {
 
         ListNode originalList = TestUtils.createListNodeForNumber("5");
 
-        ListNode newList = solution.reorderList(originalList);
-        String newListAsString = TestUtils.getListAsStringNumber(newList);
+        solution.reorderList(originalList);
+        String newListAsString = TestUtils.getListAsStringNumber(originalList);
 
         assertNotNull(newListAsString);
         assertFalse(newListAsString.isEmpty());
@@ -105,20 +105,12 @@ class ReorderListSolutionTest {
 
         ListNode originalList = TestUtils.createListNodeForNumber("1111");
 
-        ListNode newList = solution.reorderList(originalList);
-        String newListAsString = TestUtils.getListAsStringNumber(newList);
+        solution.reorderList(originalList);
+        String newListAsString = TestUtils.getListAsStringNumber(originalList);
 
         assertNotNull(newListAsString);
         assertFalse(newListAsString.isEmpty());
         assertEquals("1111", newListAsString);
-    }
-
-    @TestAllImplementations
-    void shouldDoNothingWhenListNull(String solutionName, ReorderListSolution solution) {
-
-        ListNode newList = solution.reorderList(null);
-
-        assertNull(newList);
     }
 
     static Stream<Arguments> allImplementations() {
