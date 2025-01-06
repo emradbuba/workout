@@ -8,69 +8,97 @@ import java.util.stream.Stream;
 class SortingAlgorithmTest {
 
     @TestAllImplementations
-    void should(String solutionName, SortingAlgorithm solution) {
+    void shouldSortUnSortedArrayWithEvenUniqueElements(String solutionName, SortingAlgorithm solution) {
 
-        Assertions.assertArrayEquals(new int[]{1, 2, 3, 4, 5, 6}, solution.sortArray(new int[]{6, 5, 4, 3, 2, 1}));
-
-    }
-
-    @TestAllImplementations
-    void shouldX(String solutionName, SortingAlgorithm solution) {
-
-        Assertions.assertArrayEquals(new int[]{3, 3, 2, 2, 1, 1, 2, 3, 1}, solution.sortArray(new int[]{1, 1, 1, 2, 2, 2, 3, 3, 3}));
+        Assertions.assertArrayEquals(new int[]{1, 2, 3, 4, 5, 6}, solution.sortArray(new int[]{6, 2, 3, 5, 1, 4}));
 
     }
 
     @TestAllImplementations
-    void should2(String solutionName, SortingAlgorithm solution) {
+    void shouldSortUnSortedArrayWithOddUniqueElements(String solutionName, SortingAlgorithm solution) {
+
+        Assertions.assertArrayEquals(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9}, solution.sortArray(new int[]{5, 1, 4, 2, 6, 7, 9, 8, 3}));
+
+    }
+
+    @TestAllImplementations
+    void shouldSortUnSortedArrayWithEvenNotUniqueElements(String solutionName, SortingAlgorithm solution) {
+
+        Assertions.assertArrayEquals(new int[]{1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9}, solution.sortArray(new int[]{5, 5, 1, 1, 4, 4, 2, 2, 6, 6, 7, 7, 9, 9, 8, 8, 3, 3}));
+
+    }
+
+    @TestAllImplementations
+    void shouldSortUnSortedArrayWithOddNotUniqueElements(String solutionName, SortingAlgorithm solution) {
+
+        Assertions.assertArrayEquals(new int[]{1, 1, 1, 2, 2, 2, 3, 3, 3}, solution.sortArray(new int[]{2, 1, 3, 3, 2, 1, 2, 1, 3}));
+
+    }
+
+    @TestAllImplementations
+    void shouldSortSortedArrayWithEvenUniqueElements(String solutionName, SortingAlgorithm solution) {
 
         Assertions.assertArrayEquals(new int[]{1, 2, 3, 4, 5, 6}, solution.sortArray(new int[]{1, 2, 3, 4, 5, 6}));
 
     }
 
     @TestAllImplementations
-    void should3(String solutionName, SortingAlgorithm solution) {
+    void shouldSortSortedArrayWithOddUniqueElements(String solutionName, SortingAlgorithm solution) {
 
-        Assertions.assertArrayEquals(new int[]{1, 2, 3, 4, 5, 6}, solution.sortArray(new int[]{6, 1, 4, 5, 2, 3}));
-
-    }
-
-    @TestAllImplementations
-    void should4(String solutionName, SortingAlgorithm solution) {
-
-        Assertions.assertArrayEquals(new int[]{2, 1}, solution.sortArray(new int[]{1, 2}));
+        Assertions.assertArrayEquals(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9}, solution.sortArray(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9}));
 
     }
 
     @TestAllImplementations
-    void should4a(String solutionName, SortingAlgorithm solution) {
+    void shouldSortSortedArrayWithEvenNotUniqueElements(String solutionName, SortingAlgorithm solution) {
 
-        Assertions.assertArrayEquals(new int[]{1, 2}, solution.sortArray(new int[]{1, 2}));
+        Assertions.assertArrayEquals(new int[]{1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6}, solution.sortArray(new int[]{1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6}));
 
     }
 
     @TestAllImplementations
-    void should4b(String solutionName, SortingAlgorithm solution) {
+    void shouldSortSortedArrayWithOddNotUniqueElements(String solutionName, SortingAlgorithm solution) {
 
-        Assertions.assertArrayEquals(new int[]{1, 1, 1, 1, 1}, solution.sortArray(new int[]{1, 1, 1, 1, 1}));
+        Assertions.assertArrayEquals(new int[]{1, 1, 1, 2, 2, 2, 3, 3, 3}, solution.sortArray(new int[]{1, 1, 1, 2, 2, 2, 3, 3, 3}));
 
     }
 
+    @TestAllImplementations
+    void shouldSortReverseSortedArrays(String solutionName, SortingAlgorithm solution) {
+        Assertions.assertArrayEquals(new int[]{1, 1, 1, 2, 2, 2, 3, 3, 3}, solution.sortArray(new int[]{3, 3, 3, 2, 2, 2, 1, 1, 1}));
+        Assertions.assertArrayEquals(new int[]{1, 2, 3, 4, 5, 6, 7, 8}, solution.sortArray(new int[]{8, 7, 6, 5, 4, 3, 2, 1}));
+        Assertions.assertArrayEquals(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9}, solution.sortArray(new int[]{9, 8, 7, 6, 5, 4, 3, 2, 1}));
+    }
 
     @TestAllImplementations
-    void should5(String solutionName, SortingAlgorithm solution) {
+    void shouldSortASingleElementArray(String solutionName, SortingAlgorithm solution) {
 
         Assertions.assertArrayEquals(new int[]{1}, solution.sortArray(new int[]{1}));
 
     }
 
     @TestAllImplementations
-    void should6(String solutionName, SortingAlgorithm solution) {
+    void shouldSortTwoElementsArray(String solutionName, SortingAlgorithm solution) {
+
+        Assertions.assertArrayEquals(new int[]{1, 2}, solution.sortArray(new int[]{1, 2}));
+        Assertions.assertArrayEquals(new int[]{1, 2}, solution.sortArray(new int[]{2, 1}));
+
+    }
+
+
+    @TestAllImplementations
+    void shouldSortAnEmptyArray(String solutionName, SortingAlgorithm solution) {
 
         Assertions.assertArrayEquals(new int[]{}, solution.sortArray(new int[]{}));
 
     }
 
+    @TestAllImplementations
+    void shouldReturnNullWhenNullInput(String solutionName, SortingAlgorithm solution) {
+
+        Assertions.assertNull(solution.sortArray(null));
+
+    }
 
     static Stream<Arguments> allImplementations() {
         return Stream.of(
