@@ -14,12 +14,15 @@ public class ReorderListFirstSolution implements ReorderListSolution {
     }
 
     private ListNode splitList(ListNode head) {
-        ListNode lastInFirstList, firstInSecondList;
-        for (lastInFirstList = head, firstInSecondList = head; firstInSecondList.next != null && firstInSecondList.next.next != null; lastInFirstList = lastInFirstList.next, firstInSecondList = firstInSecondList.next.next)
-            ;
-        firstInSecondList = lastInFirstList.next;
-        lastInFirstList.next = null;
-        return firstInSecondList;
+        ListNode first = head;
+        ListNode second = head;
+        while (second.next != null && second.next.next != null) {
+            first = first.next;
+            second = second.next.next;
+        }
+        ListNode newListStart = first.next;
+        first.next = null;
+        return newListStart;
     }
 
     private ListNode revertList(ListNode head) {
@@ -32,18 +35,14 @@ public class ReorderListFirstSolution implements ReorderListSolution {
         return newHead;
     }
 
-    private void mergeLists(ListNode head, ListNode secondList) {
-
-        while (secondList != null) {
-
-            ListNode nextA = head.next;
-            ListNode nextB = secondList.next;
-
-            head.next = secondList;
-            secondList.next = nextA;
-            head = nextA;
-            secondList = nextB;
+    private void mergeLists(ListNode listA, ListNode listB) {
+        while (listB != null) {
+            ListNode nextA = listA.next;
+            ListNode nextB = listB.next;
+            listA.next = listB;
+            listB.next = nextA;
+            listA = nextA;
+            listB = nextB;
         }
-
     }
 }
