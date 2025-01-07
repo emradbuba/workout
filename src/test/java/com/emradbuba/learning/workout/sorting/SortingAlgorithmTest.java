@@ -85,7 +85,6 @@ class SortingAlgorithmTest {
 
     }
 
-
     @TestAllImplementations
     void shouldSortAnEmptyArray(String solutionName, SortingAlgorithm solution) {
 
@@ -102,8 +101,9 @@ class SortingAlgorithmTest {
 
     static Stream<Arguments> allImplementations() {
         return Stream.of(
-                Arguments.of("QuickSort", new QuickSortingAlgorithm())
+                Arguments.of("Quick Sort Algorithm", new QuickSortingAlgorithm()),
+                Arguments.of("Insert Sort Algorithm", new InsertSortingAlgorithm())
+                // TODO: MergeSort
         );
     }
-
 }
