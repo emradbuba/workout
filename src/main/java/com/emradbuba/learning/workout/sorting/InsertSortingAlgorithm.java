@@ -4,50 +4,17 @@ public class InsertSortingAlgorithm implements SortingAlgorithm {
 
     @Override
     public int[] sortArray(int[] array) {
-        if (array == null || array.length < 2) return array;
 
-        performQuickSort(array, 0, array.length - 1);
+        if (array == null || array.length == 1) return array;
 
-        return array;
-    }
-
-    private void performQuickSort(int[] array, int beginIdx, int endIdx) {
-        if (beginIdx >= endIdx) return;
-
-        int middleValue = findMiddleValueAndMoveToEnd(array, beginIdx, endIdx);
-
-        int divisionIdx = divideArrayUsingMiddleValue(array, beginIdx, endIdx, middleValue);
-
-        performQuickSort(array, beginIdx, divisionIdx - 1);
-        performQuickSort(array, divisionIdx + 1, endIdx);
-    }
-
-    /**
-     * Moves all elements lower than middleValue to the left and, at the end, put the middle value on a right place.
-     */
-    private static int divideArrayUsingMiddleValue(int[] array, int beginIdx, int endIdx, int middleValue) {
-        int localDivisionIdx = beginIdx;
-        for (int i = beginIdx; i < endIdx; i++) {
-            if (array[i] < middleValue) {
-                int tmp = array[localDivisionIdx];
-                array[localDivisionIdx++] = array[i];
-                array[i] = tmp;
+        for (int i = 1; i < array.length; i++) {
+            int currentValue = array[i];
+            int newIndex = i;
+            while (newIndex > 0 && currentValue < array[newIndex-1]) {
+                array[newIndex] = array[--newIndex];
             }
+            array[newIndex] = currentValue;
         }
-        array[endIdx] = array[localDivisionIdx];
-        array[localDivisionIdx] = middleValue;
-        return localDivisionIdx;
-    }
-
-    /**
-     * Finds a middle values as the middle element in the array range discribed by begin and end indexes.
-     */
-    private static int findMiddleValueAndMoveToEnd(int[] array, int beginIdx, int endIdx) {
-        int middleIdx = (endIdx - beginIdx) / 2 + beginIdx;
-        int middleValue = array[middleIdx];
-        int tmp = array[endIdx];
-        array[endIdx] = middleValue;
-        array[middleIdx] = tmp;
-        return middleValue;
+        return array;
     }
 }
