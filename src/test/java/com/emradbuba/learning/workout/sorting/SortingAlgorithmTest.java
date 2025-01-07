@@ -8,6 +8,13 @@ import java.util.stream.Stream;
 class SortingAlgorithmTest {
 
     @TestAllImplementations
+    void shouldSortChatGptExample(String solutionName, SortingAlgorithm solution) {
+
+        Assertions.assertArrayEquals(new int[]{2, 3, 4, 5}, solution.sortArray(new int[]{5, 3, 4, 2}));
+
+    }
+
+    @TestAllImplementations
     void shouldSortUnSortedArrayWithEvenUniqueElements(String solutionName, SortingAlgorithm solution) {
 
         Assertions.assertArrayEquals(new int[]{1, 2, 3, 4, 5, 6}, solution.sortArray(new int[]{6, 2, 3, 5, 1, 4}));
