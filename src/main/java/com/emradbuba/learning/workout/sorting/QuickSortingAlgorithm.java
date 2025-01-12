@@ -15,11 +15,10 @@ public class QuickSortingAlgorithm implements SortingAlgorithm {
         if (beginIdx >= endIdx) return;
 
         int middleValue = findMiddleValueAndMoveToEnd(array, beginIdx, endIdx);
+        int divisionPoint = divideArrayUsingMiddleValue(array, beginIdx, endIdx, middleValue);
 
-        int divisionIdx = divideArrayUsingMiddleValue(array, beginIdx, endIdx, middleValue);
-
-        performQuickSort(array, beginIdx, divisionIdx - 1);
-        performQuickSort(array, divisionIdx + 1, endIdx);
+        performQuickSort(array, beginIdx, divisionPoint - 1);
+        performQuickSort(array, divisionPoint + 1, endIdx);
     }
 
     /**
@@ -45,9 +44,8 @@ public class QuickSortingAlgorithm implements SortingAlgorithm {
     private static int findMiddleValueAndMoveToEnd(int[] array, int beginIdx, int endIdx) {
         int middleIdx = (endIdx - beginIdx) / 2 + beginIdx;
         int middleValue = array[middleIdx];
-        int tmp = array[endIdx];
+        array[middleIdx] = array[endIdx];
         array[endIdx] = middleValue;
-        array[middleIdx] = tmp;
         return middleValue;
     }
 }

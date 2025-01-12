@@ -15,6 +15,18 @@ class SortingAlgorithmTest {
     }
 
     @TestAllImplementations
+    void shouldSortQuickSortEdgeCase1Example(String solutionName, SortingAlgorithm solution) {
+
+        Assertions.assertArrayEquals(new int[]{1, 2, 3, 4, 5, 6, 7}, solution.sortArray(new int[]{2, 6, 3, 7, 1, 5, 4}));
+    }
+
+    @TestAllImplementations
+    void shouldSortQuickSortEdgeCase2Example(String solutionName, SortingAlgorithm solution) {
+
+        Assertions.assertArrayEquals(new int[]{1, 2, 3, 4, 5, 6, 7}, solution.sortArray(new int[]{2, 6, 3, 1, 7, 5, 4}));
+    }
+
+    @TestAllImplementations
     void shouldSortUnSortedArrayWithEvenUniqueElements(String solutionName, SortingAlgorithm solution) {
 
         Assertions.assertArrayEquals(new int[]{1, 2, 3, 4, 5, 6}, solution.sortArray(new int[]{6, 2, 3, 5, 1, 4}));
