@@ -17,7 +17,7 @@ class SortingAlgorithmTest {
     @TestAllImplementations
     void shouldSortQuickSortEdgeCase1Example(String solutionName, SortingAlgorithm solution) {
 
-        Assertions.assertArrayEquals(new int[]{1, 2, 3, 4, 5, 6, 7}, solution.sortArray(new int[]{2, 6, 3, 7, 1, 5, 4}));
+        Assertions.assertArrayEquals(new int[]{1, 2, 3, 4, 5, 6, 7}, solution.sortArray(new int[]{1, 2, 3, 7, 5, 6, 4}));
     }
 
     @TestAllImplementations
@@ -121,6 +121,7 @@ class SortingAlgorithmTest {
     static Stream<Arguments> allImplementations() {
         return Stream.of(
                 Arguments.of("Quick Sort Algorithm", new QuickSortingAlgorithm()),
+                Arguments.of("Quick Sort Algorithm2", new QuickSortingAlgorithm2()),
                 Arguments.of("Insert Sort Algorithm", new InsertSortingAlgorithm())
                 // TODO: MergeSort
         );

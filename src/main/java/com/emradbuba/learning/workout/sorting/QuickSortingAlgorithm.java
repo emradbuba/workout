@@ -12,13 +12,13 @@ public class QuickSortingAlgorithm implements SortingAlgorithm {
     }
 
     private void performQuickSort(int[] array, int beginIdx, int endIdx) {
-        if (beginIdx >= endIdx) return;
+        if (beginIdx == endIdx) return;
 
         int middleValue = findMiddleValueAndMoveToEnd(array, beginIdx, endIdx);
         int divisionPoint = divideArrayUsingMiddleValue(array, beginIdx, endIdx, middleValue);
 
-        performQuickSort(array, beginIdx, divisionPoint - 1);
-        performQuickSort(array, divisionPoint + 1, endIdx);
+        performQuickSort(array, beginIdx, Math.max(beginIdx, divisionPoint - 1));
+        performQuickSort(array, Math.min(endIdx, divisionPoint + 1), endIdx);
     }
 
     /**
